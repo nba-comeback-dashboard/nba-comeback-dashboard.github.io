@@ -32,7 +32,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../_static/css/colored_boxes.css?v=5ae21e15" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/nbacd.css?v=a2c4866b" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/nbacd.css?v=62283bc2" />
     <link rel="stylesheet" type="text/css" href="../_static/css/nbacd-media.css?v=6b9690a2" />
     <link rel="stylesheet" type="text/css" href="../_static/css/nbacd-dashboard.css?v=5fbb978c" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/basicLightbox/5.0.0/basicLightbox.min.css" />
@@ -70,12 +70,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/js/bootstrap-select.min.js"></script>
     <script src="../_static/js/nbacd_utils.js?v=515b643b"></script>
     <script src="../_static/js/nbacd_saveas_image_dialog.js?v=e8366de8"></script>
-    <script src="../_static/js/nbacd_plotter_plugins.js?v=128a7319"></script>
+    <script src="../_static/js/nbacd_plotter_plugins.js?v=2db29657"></script>
     <script src="../_static/js/nbacd_dashboard_num.js?v=3c327ede"></script>
-    <script src="../_static/js/nbacd_plotter_data.js?v=54759950"></script>
-    <script src="../_static/js/nbacd_plotter_core.js?v=1a8e4ff7"></script>
+    <script src="../_static/js/nbacd_plotter_data.js?v=56cf1da4"></script>
+    <script src="../_static/js/nbacd_plotter_core.js?v=9af90f1a"></script>
     <script src="../_static/js/nbacd_plotter_ui.js?v=1e026115"></script>
-    <script src="../_static/js/nbacd_chart_loader.js?v=4225c571"></script>
+    <script src="../_static/js/nbacd_chart_loader.js?v=17a18322"></script>
     <script src="../_static/js/nbacd_dashboard_season_game_loader.js?v=c37d4940"></script>
     <script src="../_static/js/nbacd_dashboard_plot_primitives.js?v=4160a574"></script>
     <script src="../_static/js/nbacd_dashboard_api.js?v=2e69637f"></script>
@@ -354,6 +354,9 @@
                   
   <section id="using-claude-code-to-ai-auto-generate-this-site">
 <h1>Using Claude Code to AI Auto-Generate This Site<a class="headerlink" href="#using-claude-code-to-ai-auto-generate-this-site" title="Link to this heading">#</a></h1>
+<div class="box-container green-box docutils container">
+<p>Last updated 4/22/2025</p>
+</div>
 <nav class="contents local" id="contents">
 <ul class="simple">
 <li><p><a class="reference internal" href="#using-claude-code-to-write-this-website" id="id3">Using Claude Code to Write This Website</a></p></li>
@@ -388,7 +391,8 @@ pay for this extra power. To boot, I really like that it’s a REPL as opposed t
 it integrated in an IDE.  (And recently, after I finished this project up, Open AI has
 <a class="reference external" href="https://openai.com/index/openai-codex/">released CodeX which takes a similar tack – something I’m checking out next</a>).</p>
 <p>Overall, I settled on a hybrid project where I wrote most of the Python myself for the
-data processing and <a class="reference external" href="https://zapier.com/blog/vibe-coding/">tried my hand at vibe coding</a> for the JavaScript front-end UI using Claude Code.</p>
+data processing and <a class="reference external" href="https://zapier.com/blog/vibe-coding/">tried my hand at vibe coding</a> for the JavaScript front-end UI using Claude
+Code.</p>
 <p>In broad strokes, I:</p>
 <ul class="simple">
 <li><p>Downloaded the games using <a class="reference external" href="https://github.com/nba-comeback-dashboard/nba-comeback-dashboard/blob/main/python_backend/form_json_season_data/form_nba_game_sqlite_database.py">the nba_api.stats package</a>
@@ -406,10 +410,10 @@ files, add the hover boxes, add the custom full screen mode (using <a class="ref
 with a chart. I did jump in regularly to fix this and change basic code architecture,
 but <a class="reference internal" href="#vibe-coding-the-front-end"><span class="std std-ref">mostly I let Claude do the work via prompts</span></a>.</p></li>
 <li><p>Then, asked Claude Code <a class="reference internal" href="#creating-the-interactive-dashboard"><span class="std std-ref">to convert my analysis Python
-code</span></a> so the game processing could happen in
-the browser to build the <a class="reference internal" href="../dashboard/index.html"><span class="doc">dashboard</span></a>.  This includes
-converting some fairly involved numpy/scipy number crunching code so in the browser
-we can perform <a class="reference internal" href="methodology_forming_the_plot_trend_lines.html"><span class="doc">probit regression using maximum likelihood estimation running a
+code</span></a> so the game processing could happen in the
+browser to build the <a class="reference internal" href="../dashboard/index.html"><span class="doc">dashboard</span></a>.  This includes converting
+some fairly involved numpy/scipy number crunching code so in the browser we can
+perform <a class="reference internal" href="methodology_forming_the_plot_trend_lines.html"><span class="doc">probit regression using maximum likelihood estimation running a
 gradient descent fmin algorithm</span></a>.</p></li>
 <li><p>Then, I again vibe coded the dashboard bootstrap form UI that allows users to set up
 the conditions they want to analyze to run the dashboard. And once I got all that
@@ -756,13 +760,13 @@ forget.</p></li>
 add unnecessary and counterproductive error handling / logging / fallback code that
 just causes more problems that are harder to debug and leads to bloated code. Again,
 touching on the memory issue, that’s why <a class="reference external" href="https://github.com/nba-comeback-dashboard/nba-comeback-dashboard/blob/main/docs/frontend/source/_static/CLAUDE.md">in the CLAUDE.md file</a>
-you’ll see many, many notes about error handling, over and over. It would be ok for
-a while but would usually revert back to adding error handling code again, leading me to
-tell it again not to do this.</p></li>
+you’ll see many, many notes about error handling, over and over. It would be ok for a
+while but would usually revert back to adding error handling code again, leading me
+to tell it again not to do this.</p></li>
 <li><p><strong>After a couple of tries, debug the error yourself</strong>: And this problem gets worse
-and worse as you try to get Claude to solve a tough bug that it is not able to
-solve. Here, I found it’s often better after a try or two to figure out what is
-going on and directly guide the tool.</p></li>
+and worse as you try to get Claude to solve a tough bug that it is not able to solve.
+Here, I found it’s often better after a try or two to figure out what is going on and
+directly guide the tool.</p></li>
 <li><p><strong>Make sure you’re actually testing what you are asking Claude to fix</strong>: A combo of
 the above points, I wasted more than a few dollars asking Claude to repeatedly fix
 something it already had fixed by testing on a wrong URL. Then, it can get into a
@@ -771,12 +775,13 @@ unnecessary attempts at trying to solve an unsolvable problem. To my amazement, 
 time it even told me that most likely I wasn’t looking at the code it was changing.</p></li>
 <li><p><strong>Commit, then ask for a single feature one at a time</strong>: I got into a flow where
 every time before I asked for a feature, I would commit, ask, test, then (usually)
-diff the change using <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">difftool</span></code>. If it was a mess, I would revert. Many
-times I didn’t follow this advice, asking for multiple features at a time or not
-committing changes and that’s when I would get into the most trouble. (Also, Claude
-Code can commit for you, something I didn’t do much in an effort to save cost but
-something I’m revisiting more in the future.)</p></li>
-<li><p><strong>Use Claude to help write your requirements</strong>: Since the whole point is to save effort,
+diff the change using <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">difftool</span></code>. If it was a mess, I would revert. Many times
+I didn’t follow this advice, asking for multiple features at a time or not committing
+changes and that’s when I would get into the most trouble. (Also, Claude Code can
+commit for you, something I didn’t do much in an effort to save cost but something
+I’m revisiting more in the future.)</p></li>
+<li><p><strong>Use Claude to help write your requirements</strong>: Since the whole point is to save
+effort,
 you’ll start to notice that typing all the .md files and prompts can take time, too.
 So I did get into a habit of writing bad specs and giving bad prompts, asking Claude
 to clean up and flesh out my requirements before writing code. I had good success
