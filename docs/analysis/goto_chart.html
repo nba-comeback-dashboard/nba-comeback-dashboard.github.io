@@ -72,7 +72,7 @@
     <script src="../_static/js/nbacd_saveas_image_dialog.js?v=e8366de8"></script>
     <script src="../_static/js/nbacd_plotter_plugins.js?v=2db29657"></script>
     <script src="../_static/js/nbacd_dashboard_num.js?v=3c327ede"></script>
-    <script src="../_static/js/nbacd_plotter_data.js?v=56cf1da4"></script>
+    <script src="../_static/js/nbacd_plotter_data.js?v=f2aff932"></script>
     <script src="../_static/js/nbacd_plotter_core.js?v=9af90f1a"></script>
     <script src="../_static/js/nbacd_plotter_ui.js?v=1e026115"></script>
     <script src="../_static/js/nbacd_chart_loader.js?v=17a18322"></script>
@@ -86,7 +86,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="A Rule Of Thumb That Actually Works If Your Thumb Is Good At Math" href="rule_of_thumb_that_actually_works.html" />
-    <link rel="prev" title="Home Versus Away" href="home_v_away.html" />
+    <link rel="prev" title="Regular Season vs. Playoffs" href="regular_v_playoffs.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -360,14 +360,14 @@
 <section id="all-the-available-data">
 <span id="id1"></span><h2>All The Available Data<a class="headerlink" href="#all-the-available-data" title="Link to this heading">#</a></h2>
 <p>Overall, I feel the most useful dashboard chart is this one:</p>
-<div id="goto/nbacd_points_versus_36_time_all_eras" class="nbacd-chart"></div><p>This includes all games from 1996 (which is about 36,000 games). If your team is down,
+<div id="goto/nbacd_points_versus_36_time_all_eras" class="nbacd-chart"></div><p>This includes all games from 1996 (which is about ~36,000 games). If your team is down,
 this gives you a pretty good sense of how steep of a mountain your team has to climb
 (and of course on the flip side how safe your lead is). Plus, I like being able to see
 the current record for a given time knowing that if you are beyond the record it would
 be, well, a record if you came back. (And, ahem, our <a class="reference internal" href="do_the_twolves_give_up_big_leads.html"><span class="doc">Minnesota Timberwolves</span></a> hold or tie the record for allowing the
-biggest comebacks at the 3, 6, 7, and 10 minute marks.)</p>
+biggest comebacks at the 3, 6, 7, and 10 minute marks).</p>
 <p>You can click on data points and see which game(s) hold the record. Going full screen
-makes it easier, and on mobile, you have to go full screen first. Once you go full
+makes it easier and on mobile, you have to go full screen first. Once you go full
 screen, then you can click on any point to get the summary for that minute.</p>
 <p>Please note, the ‘Record’ is calculated by getting the point margin exactly at that
 minute mark, so if a team was down 25 at the start of the 4th and then went down 26 and
@@ -377,47 +377,61 @@ this <a class="reference internal" href="rule_of_thumb_that_actually_works.html"
 </section>
 <section id="home-versus-away-for-the-modern-era">
 <span id="id2"></span><h2>Home Versus Away For The Modern Era<a class="headerlink" href="#home-versus-away-for-the-modern-era" title="Link to this heading">#</a></h2>
-<p>The conditional providing the greatest value is probably adding whether <a class="reference internal" href="home_v_away.html"><span class="doc">the team
-coming back is at home or away</span></a>. Then, <a class="reference internal" href="20_is_new_18.html"><span class="doc">limiting the
-seasons to the modern era</span></a>.</p>
-<p>Adding those two conditions gives you these two plots:</p>
+<p>The conditional providing the greatest discrimination is probably adding whether
+<a class="reference internal" href="home_v_away.html"><span class="doc">the team coming back is at home or away</span></a>. Then,
+<a class="reference internal" href="20_is_new_18.html"><span class="doc">limiting the seasons to the modern era</span></a>.</p>
+<p>Adding those two conditions gives you these two plots, which will give you a closer
+match to the probability given by an in-game probability calculator for example:</p>
 <div id="goto/nbacd_points_versus_36_for_home_modern_era" class="nbacd-chart"></div><div id="goto/nbacd_points_versus_36_for_away_modern_era" class="nbacd-chart"></div></section>
 <section id="how-this-compares-versus-espn-s-live-win-probability">
 <span id="how-this-compares-versus-espns-live-win-probability"></span><h2>How This Compares Versus ESPN’s Live Win Probability<a class="headerlink" href="#how-this-compares-versus-espn-s-live-win-probability" title="Link to this heading">#</a></h2>
 <section id="using-all-game-data">
 <h3>Using All Game Data<a class="headerlink" href="#using-all-game-data" title="Link to this heading">#</a></h3>
-<p>To get a sense of how well the <a class="reference internal" href="#all-the-available-data"><span class="std std-ref">first chart works</span></a>, I
-plotted what probabilities it came up with versus what ESPN’s live game probability
-page spits out. So let’s look at a recent run-of-the-mill Timberwolves game <a class="reference external" href="https://www.nba.com/news/bucks-stun-timberwolves-4th-quarter-comeback">against
-the Bucks on 04/09/2025</a>:</p>
+<p>To get a sense of how well the <a class="reference internal" href="#all-the-available-data"><span class="std std-ref">first chart (which just looks at all available
+data) works</span></a>, I plotted what probabilities it came up with
+versus what ESPN’s live game probability page spits out. And, not because <a class="reference internal" href="do_the_twolves_give_up_big_leads.html"><span class="doc">I’m
+obsessed with this game or anything</span></a>,
+let’s look at a recent run of the mill Timberwolves game <a class="reference external" href="https://www.nba.com/news/bucks-stun-timberwolves-4th-quarter-comeback">against the Bucks on
+04/09/2025</a>:</p>
 <div id="goto/espn_v_dashboard_all_time_min_at_bucks_401705718" class="nbacd-chart"></div><p>Here, we are again plotting on a normal probability plot instead of a linear y axis so
 we can better examine the extreme probabilities. The dashboard probabilities are taken
-from the same ones shown in the ‘goto’ chart at the top of this page: for any dashboard
-point, you can click on it and it will bring you to the interactive dashboard page and
-show the exact regression fit line used to calculate the probability for that point.</p>
+from the same ones shown in the goto chart at the top of this page. In fact, for any
+dashboard point you can click on it and it will bring you to the interactive dashboard
+page and show the exact regression fit line used to calculate the probability for that
+point.  And if you click on the 10 minutes remaining point you will see that the
+Twolves hold the record for losing a game when up 24 points with 10 minutes to go.</p>
 <p>Why there are differences between this model and ESPN’s model should come as no
 surprise: as stated elsewhere, the algorithms used to come up with live game
-probability calculations employ <a class="reference external" href="https://fivethirtyeight.com/methodology/how-our-nba-predictions-work/">involved formulas</a> that are also
-closed, so it’s not clear what input conditions are being fed into the model.</p>
-<p>In this dashboard model, <a class="reference internal" href="methodology_forming_the_plot_trend_lines.html"><span class="doc">the underlying methodology is just to use the available
-NBA play by play game data</span></a> and
-here you can click on a data point to see exact historical game data used to fit the
-regression line.</p>
+probability calculator employ <a class="reference external" href="https://fivethirtyeight.com/methodology/how-our-nba-predictions-work/">involved formulas</a> that are also
+closed so it’s not clear what the input conditions are being fed into the model.</p>
+<p>In this dashboard model, <a class="reference internal" href="methodology_forming_the_plot_trend_lines.html"><span class="doc">the underlying methodology is meant to be simple and
+transparent</span></a> and you can click on
+the data to see exact historical game data used to fit the regression line.</p>
 </section>
 <section id="adding-conditionals">
 <h3>Adding Conditionals<a class="headerlink" href="#adding-conditionals" title="Link to this heading">#</a></h3>
-<p>We can add the same conditions to match the <a class="reference internal" href="#home-versus-away-for-the-modern-era"><span class="std std-ref">second and third plots</span></a> where we <a class="reference internal" href="20_is_new_18.html"><span class="doc">limit to the last 8 years</span></a> and take the <a class="reference internal" href="home_v_away.html"><span class="doc">home team advantage</span></a> into account:</p>
+<p>You can add conditions to help discriminate on the current game. For example, we can
+plot this same game again but <a class="reference internal" href="20_is_new_18.html"><span class="doc">limit to seasons to the last 8 years</span></a> and take the <a class="reference internal" href="home_v_away.html"><span class="doc">home team advantage</span></a> into account:</p>
 <div id="goto/espn_v_dashboard_modern_at_home_min_at_bucks_401705718" class="nbacd-chart"></div><p>This now is further away from the ESPN model, but for all practical purposes tells the
-same story. Here, the dashboard model is giving a bigger advantage to the home team. I
-would have thought the charts limited to recent years and considering home court
-advantage would have been closer to the ESPN algorithm, but not knowing what’s in the
-ESPN model, I don’t have much on which to speculate.</p>
+same story. Here, the dashboard model is giving a bigger advantage to the home team, it
+appears but again exact comparisons are not possible due to the closed nature of the
+model (nor would I attempt to understand it even if I had the source code).  It could
+be very well that the ESPN model is not taking home court advantage enough into account
+but I’m not sure all the variables be fed into the model.</p>
+</section>
+<section id="game-1-gsw-hou-on-april-20-2025">
+<h3>Game 1 GSW &#64; HOU on April 20, 2025<a class="headerlink" href="#game-1-gsw-hou-on-april-20-2025" title="Link to this heading">#</a></h3>
 <p>Taking another game at random that I just watched and was testing the dashboard against
-- GSW &#64; HOU on April 21, 2025. Here’s the comparison just using all available game data
-since 1996:</p>
-<div id="goto/espn_v_dashboard_all_time_gsw_at_hou_401767823" class="nbacd-chart"></div><p>And here again using recent years and home team advantage (and again, the dashboard
-model is giving a bigger advantage to the home team):</p>
+was the GSW &#64; HOU on April 21, 2025. Here’s the comparison just using all available
+game data since 1996:</p>
+<div id="goto/espn_v_dashboard_all_time_gsw_at_hou_401767823" class="nbacd-chart"></div><p>And here again using recent years and home team advantage:</p>
 <div id="goto/espn_v_dashboard_modern_at_home_gsw_at_hou_401767823" class="nbacd-chart"></div></section>
+<section id="game-2-min-lal-on-april-22-2025">
+<h3>Game 2 MIN &#64; LAL on April 22, 2025<a class="headerlink" href="#game-2-min-lal-on-april-22-2025" title="Link to this heading">#</a></h3>
+<div id="goto/espn_v_dashboard_all_time_min_at_lal_401767915" class="nbacd-chart"></div><div id="goto/espn_v_dashboard_modern_at_home_min_at_lal_401767915" class="nbacd-chart"></div></section>
+<section id="game-2-mem-okc-on-april-22-2025">
+<h3>Game 2 MEM &#64; OKC on April 22, 2025<a class="headerlink" href="#game-2-mem-okc-on-april-22-2025" title="Link to this heading">#</a></h3>
+<div id="goto/espn_v_dashboard_all_time_grizz_at_okc_401767903" class="nbacd-chart"></div><div id="goto/espn_v_dashboard_modern_at_home_grizz_at_okc_401767903" class="nbacd-chart"></div></section>
 </section>
 <section id="supplementals">
 <span id="id3"></span><h2>Supplementals<a class="headerlink" href="#supplementals" title="Link to this heading">#</a></h2>
@@ -455,6 +469,9 @@ limited to our recent history is also useful:</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-this-compares-versus-espn-s-live-win-probability">How This Compares Versus ESPN’s Live Win Probability</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-all-game-data">Using All Game Data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-conditionals">Adding Conditionals</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#game-1-gsw-hou-on-april-20-2025">Game 1 GSW @ HOU on April 20, 2025</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#game-2-min-lal-on-april-22-2025">Game 2 MIN @ LAL on April 22, 2025</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#game-2-mem-okc-on-april-22-2025">Game 2 MEM @ OKC on April 22, 2025</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#supplementals">Supplementals</a></li>
