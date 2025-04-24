@@ -379,11 +379,16 @@ home vs. away, etc.). And this <a class="reference internal" href="rule_of_thumb
 <section id="how-this-compares-versus-espn-s-live-win-probability">
 <span id="how-this-compares-versus-espns-live-win-probability"></span><h2>How This Compares Versus ESPN’s Live Win Probability<a class="headerlink" href="#how-this-compares-versus-espn-s-live-win-probability" title="Link to this heading">#</a></h2>
 <p>A useful way to judge the utility of this chart is to see how it compares to ESPN’s
-running win probabilities for a given game. Even though the ESPN model is a complicated
-model, relying heavily on their <a class="reference external" href="https://www.espn.com/nba/story/_/page/Basketball-Power-Index/espn-nba-basketball-power-index">Basketball Power Index</a>,
-and the dashboard model is simply relying on the raw game data from 1996 and
-<a class="reference internal" href="methodology_forming_the_plot_trend_lines.html"><span class="doc">fitting a normal model to the data</span></a>, both models mostly tell a
-similar story about a team’s overall comeback chances.</p>
+running win probabilities for a given game. Even though:</p>
+<ul class="simple">
+<li><p>The ESPN model is a complicated model, relying heavily on individual player data and
+their <a class="reference external" href="https://www.espn.com/nba/story/_/page/Basketball-Power-Index/espn-nba-basketball-power-index">Basketball Power Index</a>,</p></li>
+<li><p>And the dashboard model is solely relying on the raw win/loss versus point margin
+data from 1996 and <a class="reference internal" href="methodology_forming_the_plot_trend_lines.html"><span class="doc">fitting a normal model to the data</span></a></p></li>
+</ul>
+<p>both models mostly tell a similar story about a team’s overall comeback chances. While
+requiring further analysis, this suggests the most correlated variable to comeback
+chances is points down versus time.</p>
 <section id="timberwolves-bucks-on-04-09-2025">
 <h3>Timberwolves &#64; Bucks on 04/09/2025<a class="headerlink" href="#timberwolves-bucks-on-04-09-2025" title="Link to this heading">#</a></h3>
 <p>So let’s look at a recent run-of-the-mill Timberwolves game <a class="reference external" href="https://www.nba.com/news/bucks-stun-timberwolves-4th-quarter-comeback">against the Bucks on
@@ -425,9 +430,11 @@ probability of 98.4%.</p>
 <p>Based just on all games from 1996 until now, the odds are about 97.8% – however, when
 we account for the fact that Golden State was the away team and limit our data to the
 modern era (where comebacks are slightly more likely), the dashboard model drops the
-win probability to 95.9%. Seeing how Houston was the 2nd seed in the west and Golden
+win probability to 95.9%. Seeing how Houston was the 2nd seed in the West and Golden
 State got in through the play-in, I am curious what data ESPN has that pushes them
-above the historical average by a point.</p>
+above the historical average by a point. (Most likely, based on <a class="reference external" href="https://fivethirtyeight.com/methodology/how-our-nba-predictions-work/">discussions of how
+prediction models work</a>, the model is
+giving the seasoned veterans Steph Curry and Jimmy Butler some extra juice.)</p>
 </section>
 </section>
 <section id="supplementals">
