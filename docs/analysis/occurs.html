@@ -1,0 +1,542 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Occurrence Frequencies of Points Scored, Points Down, and Garbage Time Games &#8212; NBA Comeback Dashboard  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/colored_boxes.css?v=5ae21e15" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/nbacd.css?v=62283bc2" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/nbacd-media.css?v=6b9690a2" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/nbacd-dashboard.css?v=5fbb978c" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/basicLightbox/5.0.0/basicLightbox.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/colored_boxes.css?v=5ae21e15" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/pydata-customizations.css?v=1a338c58" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-6Q6K588YXL"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-6Q6K588YXL');
+            </script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'analysis/occurs';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-zoom/2.2.0/chartjs-plugin-zoom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.1.0/pako.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/basicLightbox/5.0.0/basicLightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjs@11.8.0/lib/browser/math.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fmin@0.0.4/build/fmin.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/js/bootstrap-select.min.js"></script>
+    <script src="../_static/js/nbacd_utils.js?v=515b643b"></script>
+    <script src="../_static/js/nbacd_saveas_image_dialog.js?v=e8366de8"></script>
+    <script src="../_static/js/nbacd_plotter_plugins.js?v=2db29657"></script>
+    <script src="../_static/js/nbacd_dashboard_num.js?v=3c327ede"></script>
+    <script src="../_static/js/nbacd_plotter_data.js?v=3848fca2"></script>
+    <script src="../_static/js/nbacd_plotter_core.js?v=e7463bd4"></script>
+    <script src="../_static/js/nbacd_plotter_ui.js?v=1e026115"></script>
+    <script src="../_static/js/nbacd_chart_loader.js?v=17a18322"></script>
+    <script src="../_static/js/nbacd_dashboard_season_game_loader.js?v=c37d4940"></script>
+    <script src="../_static/js/nbacd_dashboard_plot_primitives.js?v=4160a574"></script>
+    <script src="../_static/js/nbacd_dashboard_api.js?v=2e69637f"></script>
+    <script src="../_static/js/nbacd_dashboard_state.js?v=f076e384"></script>
+    <script src="../_static/js/nbacd_dashboard_ui.js?v=67074b87"></script>
+    <script src="../_static/js/nbacd_dashboard_init.js?v=4612a8d0"></script>
+    <link rel="icon" href="../_static/bball.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="The Goto Chart" href="goto_chart.html" />
+    <link rel="prev" title="Regular Season vs. Playoffs" href="regular_v_playoffs.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">NBA Comeback Dashboard</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Analysis
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../dashboard/index.html">
+    Dashboard
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://buymeacoffee.com/nba.comeback.dashboard" title="Buy Me a Coffee" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static/icons/buy-me-coffee.svg" class="icon-link-image" alt="Buy Me a Coffee"/></a>
+        </li>
+</ul></div>
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Analysis
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../dashboard/index.html">
+    Dashboard
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://buymeacoffee.com/nba.comeback.dashboard" title="Buy Me a Coffee" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static/icons/buy-me-coffee.svg" class="icon-link-image" alt="Buy Me a Coffee"/></a>
+        </li>
+</ul></div>
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Analysis</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Occurrence Frequencies of Points Scored, Points Down, and Garbage Time Games</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="occurrence-frequencies-of-points-scored-points-down-and-garbage-time-games">
+<h1>Occurrence Frequencies of Points Scored, Points Down, and Garbage Time Games<a class="headerlink" href="#occurrence-frequencies-of-points-scored-points-down-and-garbage-time-games" title="Link to this heading">#</a></h1>
+<div class="box-container green-box docutils container">
+<p>Last updated 4/25/2025</p>
+</div>
+<section id="largest-and-smallest-final-scores">
+<span id="id1"></span><h2>Largest and Smallest Final Scores<a class="headerlink" href="#largest-and-smallest-final-scores" title="Link to this heading">#</a></h2>
+<p>The probability density function of the final score for each team is shown below.
+Remarkably, the 1st and 2nd record since 1996 come from the same 02/24/2023 game – <a class="reference external" href="https://www.nba.com/game/0022200902">a
+double over time win by Kings over the Clippers 176-175</a>.</p>
+<div id="occurs/all_time_scores" class="nbacd-chart"></div><p>Cumulating the probabilties from left to right gives us this plot, which tells us the
+median score of an NBA game since 1996 is 101 points.</p>
+<div id="occurs/all_time_scores_or_more" class="nbacd-chart"></div></section>
+<section id="max-points-down">
+<span id="id2"></span><h2>Max Points Down<a class="headerlink" href="#max-points-down" title="Link to this heading">#</a></h2>
+<p>We can do a similar analysis for the maximum points down at any point in the game. Here
+is the probability density function, which tells us that:</p>
+<ul class="simple">
+<li><p>The tightest games since 1996 have been within 5 points and it’s happened 8 times.</p></li>
+<li><p>Only about 1,000 games out of 36,000 have been ‘wire-to-wire’ with either team’s
+lead being 8 or less.</p></li>
+<li><p>And the biggest blowout ever got up to a 78 point deficit.</p></li>
+</ul>
+<div id="occurs/all_time_max_48_point_margin" class="nbacd-chart"></div><p>And we can integrate it again from left to right to get the probability of being down
+max points or more, which tells us the median game runs at least a 17 point deficit.</p>
+<div id="occurs/all_time_max_or_more_48_point_margin" class="nbacd-chart"></div></section>
+<section id="garbage-time-games">
+<span id="id3"></span><h2>Garbage Time Games<a class="headerlink" href="#garbage-time-games" title="Link to this heading">#</a></h2>
+<p>We can now look at the point margins exactly at 6 minutes:</p>
+<div id="occurs/all_time_at_6_point_margin" class="nbacd-chart"></div><p>And again, integrating to get points down or more at 6 minutes:</p>
+<div id="occurs/all_time_at_or_more_6_point_margin" class="nbacd-chart"></div><p>And this can tell us some interesting things.  <a class="reference external" href="https://nba-comeback-dashboard.github.io/dashboard/index.html?p=2&amp;t=6&amp;s=1996-2024-B&amp;m=auto">From the dashboard</a>
+we can see that:</p>
+<ul class="simple">
+<li><p>If you are down 15 points, you have about a 1% chance of coming back based
+historical data from 1996.</p></li>
+<li><p>The record comeback since 1996 was 22 points and given up by our <a class="reference external" href="https://www.nba.com/game/0021900696">Minnesota
+Timberwolves to the Kings on 1/27/2020</a>.</p></li>
+</ul>
+<p>Using those two numbers we can say:</p>
+<ul class="simple">
+<li><p>A full 28% of games – over 1 in 4! – are effectively over by the 6-minute mark
+needing a 15 point comeback or more.</p></li>
+<li><p>And 10.4% of games would require a 23 point comeback to set a record.</p></li>
+</ul>
+<p>That’s a lot of garbage time games!  Even though, about 35% of games are within 6-7
+points or less.</p>
+<p>But, to be fair, there could have been more drama before the 6 minute mark.  Walking up
+in time gets a little better.  Looking at the 4th quarter we get:</p>
+<div id="occurs/all_time_at_or_more_12_point_margin" class="nbacd-chart"></div><p>Here:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://nba-comeback-dashboard.github.io/dashboard/index.html?p=2&amp;t=12&amp;s=1996-2024-B&amp;m=auto">The team down 20 points starting the 4th has about a 1% chance of coming</a>
+and that’s only about 13-14% of games where the deficit is 20 points or more starting
+the 4th.</p></li>
+<li><p>And games down 28 points or more – which would require breaking <a class="reference external" href="https://www.nba.com/game/0020200278">the current record
+of 27 point 4th quarter comeback</a> – only
+happen about 4% of the time.</p></li>
+</ul>
+<p>And at halftime:</p>
+<div id="occurs/all_time_at_or_more_24_point_margin" class="nbacd-chart"></div><ul class="simple">
+<li><p><a class="reference external" href="https://nba-comeback-dashboard.github.io/dashboard/index.html?p=2&amp;t=24&amp;s=1996-2024-B&amp;m=auto">The since-1996 historical 1% chance of coming back is about a 27 point deficit</a>
+and that’s only 1.5% of games.</p></li>
+<li><p>The 10% chance if about 15 points which is only about 17% of all games since 1996.</p></li>
+</ul>
+<p>So it’s pretty rare you need to turn off the TV at halftime.</p>
+</section>
+<section id="comparing-old-school-1996-2016-to-modern-2017-2024">
+<span id="comparing-occurs-eras"></span><h2>Comparing Old School (1996-2016) to Modern (2017-2024)<a class="headerlink" href="#comparing-old-school-1996-2016-to-modern-2017-2024" title="Link to this heading">#</a></h2>
+<section id="shift-in-final-scores">
+<h3>Shift in Final Scores<a class="headerlink" href="#shift-in-final-scores" title="Link to this heading">#</a></h3>
+<p>There has been a remarkable shift in the final scores of NBA games, with the median
+score of games in the modern era being about 111 points versus 97 in the past, a 14
+point shift.  And this a static shift in the mean of the data, the slope or standard
+variation remains almost perfectly constant:</p>
+<div id="occurs/old_school_v_modern_scores" class="nbacd-chart"></div><div id="occurs/old_school_v_modern_scores_or_more" class="nbacd-chart"></div></section>
+<section id="id4">
+<h3>Max Points Down<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>Looking at a chart comparing max points down or more:</p>
+<div id="occurs/old_school_v_modern_max_or_more_48_point_margin" class="nbacd-chart"></div><p>Now, teams fall down:</p>
+<ul class="simple">
+<li><p>30 points or more <code class="docutils literal notranslate"><span class="pre">~12.2%</span></code> of the time compared to <code class="docutils literal notranslate"><span class="pre">~7.6%</span></code> in the past, a notable
+1.59x increase (or about 59% more frequently).</p></li>
+<li><p>20 points or more <code class="docutils literal notranslate"><span class="pre">~18.8%</span></code> of the time compared to <code class="docutils literal notranslate"><span class="pre">~14.3%</span></code> in the past, a
+not-quite-as-dramatic 1.31x increase (or about 31% more frequently).</p></li>
+</ul>
+</section>
+<section id="id5">
+<h3>Garbage Time Games<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>Looking at max down or more at the 6 minute mark, we see a similar shift:</p>
+<div id="occurs/old_school_v_modern_at_or_more_6_point_margin" class="nbacd-chart"></div><p>But the amount of games where “it’s over” stays about the same: while there are more
+games with larger deficits this is offset by modern teams being able to overcome about
+<a class="reference internal" href="20_is_new_18.html"><span class="doc">2-3 more points at the same probability as in the past</span></a>.</p>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#largest-and-smallest-final-scores">Largest and Smallest Final Scores</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#max-points-down">Max Points Down</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#garbage-time-games">Garbage Time Games</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparing-old-school-1996-2016-to-modern-2017-2024">Comparing Old School (1996-2016) to Modern (2017-2024)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shift-in-final-scores">Shift in Final Scores</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Max Points Down</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Garbage Time Games</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
