@@ -74,7 +74,7 @@
     <script src="../_static/js/nbacd_plotter_plugins.js?v=2db29657"></script>
     <script src="../_static/js/nbacd_dashboard_num.js?v=3c327ede"></script>
     <script src="../_static/js/nbacd_plotter_data.js?v=3848fca2"></script>
-    <script src="../_static/js/nbacd_plotter_core.js?v=9af90f1a"></script>
+    <script src="../_static/js/nbacd_plotter_core.js?v=e7463bd4"></script>
     <script src="../_static/js/nbacd_plotter_ui.js?v=1e026115"></script>
     <script src="../_static/js/nbacd_chart_loader.js?v=17a18322"></script>
     <script src="../_static/js/nbacd_dashboard_season_game_loader.js?v=c37d4940"></script>
@@ -364,7 +364,7 @@ slightly different ways of defining it. Let’s explore the four plot types used
 project:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#id1">Max Points Down Or More</a></p></li>
-<li><p><a class="reference internal" href="#id2">Max Points Down</a></p></li>
+<li><p><a class="reference internal" href="#id2">Max Points Down At Most</a></p></li>
 <li><p><a class="reference internal" href="#id3">Points Down At Time</a></p></li>
 <li><p><a class="reference internal" href="#id4">Percent Chance of Winning: Time v. Points Down</a></p></li>
 </ul>
@@ -399,8 +399,8 @@ games. This means that a given point margin (say -10) is getting weighted down w
 of the previous (and lower chance) probabilities, because the -10 point also includes
 the wins/losses from -11, -12, -13, …, -20, …, -30, and on and on.</p>
 </section>
-<section id="max-points-down">
-<span id="id2"></span><h2>Max Points Down<a class="headerlink" href="#max-points-down" title="Link to this heading">#</a></h2>
+<section id="max-points-down-at-most">
+<span id="id2"></span><h2>Max Points Down At Most<a class="headerlink" href="#max-points-down-at-most" title="Link to this heading">#</a></h2>
 <p>Even though this is a common way of talking about comebacks, it’s a little unfair in a
 sense. For the -10 point deficit, the odds of coming back are weighted down by all the
 other more unlikely comebacks.</p>
@@ -512,7 +512,7 @@ the Win %. Normally, the numbers are almost the same.</p>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#max-points-down-or-more">Max Points Down Or More</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#max-points-down">Max Points Down</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#max-points-down-at-most">Max Points Down At Most</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#points-down-at-time">Points Down At Time</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#percent-chance-of-winning-time-v-points-down">Percent Chance of Winning: Time v. Points Down</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-controls">Plot Controls</a></li>
