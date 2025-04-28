@@ -31,15 +31,20 @@
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/colored_boxes.css?v=5ae21e15" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/colored_boxes.css?v=103e0ea0" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/toc_entry.css?v=c18cc440" />
     <link rel="stylesheet" type="text/css" href="../_static/css/nbacd.css?v=62283bc2" />
     <link rel="stylesheet" type="text/css" href="../_static/css/nbacd-media.css?v=6b9690a2" />
     <link rel="stylesheet" type="text/css" href="../_static/css/nbacd-dashboard.css?v=5fbb978c" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/basicLightbox/5.0.0/basicLightbox.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/css/bootstrap-select.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/colored_boxes.css?v=5ae21e15" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/pydata-customizations.css?v=1a338c58" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/colored_boxes.css?v=103e0ea0" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/pydata-customizations.css?v=bdb493fc" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/toc_entry.css?v=c18cc440" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/font_choice_4.css?v=efdf24e0" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/toc_entry_font_choice_4.css?v=32f887ec" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom_logo.css?v=abac4470" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -50,6 +55,7 @@
     <script src="../_static/documentation_options.js?v=5929fcd5"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/toc_entry_wrapper.js?v=8d6b754d"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-6Q6K588YXL"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -385,7 +391,9 @@ shift has occurred comparing new to old, the shift is more about 2 to 2.5 points
 <li><p>2017-18 to 2024-25 (modern)</p></li>
 </ul>
 <p>(<a class="reference internal" href="#deciding-on-eras-breakdown"><span class="std std-ref">As explained below</span></a>, a more targeted recent modern
-era does not change the analysis, so the larger dataset was chosen).</p>
+era does not change the analysis, so the larger dataset was chosen.  The change in
+increased scoring and comeback chances appears to start changing most drastically
+around 2016).</p>
 <p>Looking at this data, the chance of coming back from 20 points-or-more down (<code class="docutils literal notranslate"><span class="pre">~5.3%</span></code>)
 is about the same as coming back from 18 points-or-more down (<code class="docutils literal notranslate"><span class="pre">~4.9%</span></code>) in the earlier
 era. To put this in perspective, this overall 2 to 2.5 point shift is on par with but
@@ -466,13 +474,6 @@ Increase is more dramatic, point shift is more modest), but as a fan watching yo
 sink into a 20 point hole, I don’t think the data is telling you to say “20 points,
 that’s nothing anymore”.</p>
 </section>
-<section id="win-percentages-when-max-deficit-is-n-points-at-most">
-<span id="max-down-at-most-n-points"></span><h2>Win Percentages When Max Deficit is N Points At Most<a class="headerlink" href="#win-percentages-when-max-deficit-is-n-points-at-most" title="Link to this heading">#</a></h2>
-<p><a class="reference internal" href="understanding_and_using_the_plots.html#max-points-down-at-most"><span class="std std-ref">Another way of looking at comebacks</span></a> is calculating the
-% chance of coming back from down N points <em>at most</em> over an entire game:</p>
-<div id="plots/old_school_v_modern/max_down_48" class="nbacd-chart"></div><p>And from halftime:</p>
-<div id="plots/old_school_v_modern/max_down_24" class="nbacd-chart"></div><p>Here the shift is a little larger, about 2.75 points.</p>
-</section>
 <section id="win-percentages-when-teams-are-down-n-points-with-so-much-time-left">
 <span id="id3"></span><h2>Win Percentages When Teams Are Down N Points With So Much Time Left<a class="headerlink" href="#win-percentages-when-teams-are-down-n-points-with-so-much-time-left" title="Link to this heading">#</a></h2>
 <p><a class="reference internal" href="understanding_and_using_the_plots.html#points-down-at-time"><span class="std std-ref">Another way to look at it and the more natural way to think about it while you
@@ -530,35 +531,44 @@ or more down against any other team.</p>
 </section>
 <section id="what-else-could-be-going-on">
 <span id="id6"></span><h2>What Else Could Be Going On?<a class="headerlink" href="#what-else-could-be-going-on" title="Link to this heading">#</a></h2>
-<p>I am making the case that, in face of popular opinion, blowing a 20-point lead has
-about the same chances as blowing an 18-point lead in the past. That two-point shift is
-significant but I don’t think matches what <a class="reference external" href="https://www.reddit.com/r/nba/comments/1cc2qqv/dumb_question_is_blowing_a_20_point_lead_that_bad/">I see people saying about leads these days</a>.</p>
+<p>Blowing a 20-point lead now has about the same chances as blowing a 17 or 18-point lead
+in the past. This two to three point shift is significant but I don’t think matches
+what <a class="reference external" href="https://www.reddit.com/r/nba/comments/1cc2qqv/dumb_question_is_blowing_a_20_point_lead_that_bad/">I see people saying about leads these days</a>.</p>
 <p>So I just want to consider a few points that I think are useful when thinking about
 this issue:</p>
 <ul>
-<li><p>Scoring is up dramatically. <a class="reference internal" href="occurs.html#comparing-occurs-eras"><span class="std std-ref">The median score is 111 points in the modern era</span></a> as compared to 97 in the past: a 14-point shift. Also, teams
-getting down 30 or more points happens 60% more often and teams getting down 20 or
-more points happens 30% more now than in the past.</p></li>
-<li><p>However, the fact that teams can score more quickly does not automatically
-lead to the conclusion that big comebacks should be more probable: if you are down
-and can score quickly, so can your opponent and keep you down. So while points are a
-little easier to come by, this effect is offset by the counter fact that they are
-also a little easier to give up.</p></li>
+<li><p>Sometimes people refer to the increase in percent chance, which is large, but overall
+the percent shift is not dramatic enough to support the narrative.  For example, the
+percent of times a team came back from 15 or more down is about 12.8% recently
+compared to 9.2% in the past.  While that’s an increase of about 40%, I don’t think
+having a 12.8% chance versus a 9.2% change gives you a markedly different feeling
+about the game.  If you <a class="reference internal" href="#what-an-8-point-shift-looks-like"><span class="std std-ref">compare that to the 8 point shift graph</span></a>, here the percent chance is about 34% for a top
+10 team to comeback 15 or more against a bottom ten team over the last 8 years.  That
+is dramatic and would warrant the kind of talk of “a 15 point lead doesn’t matter
+anymore”.</p></li>
+<li><p>Scoring is up dramatically. <a class="reference internal" href="occurs.html#comparing-occurs-eras"><span class="std std-ref">The median score is 111 points in the modern era</span></a> as compared to 97 in the past: a 14-point shift. Also,
+<a class="reference internal" href="occurs.html#comparing-occurs-eras-max-points-down"><span class="std std-ref">teams getting down</span></a> 30 or more points
+happens 60% more often and teams getting down 20 or more points happens 30% more now
+than in the past.</p>
+<p>However, the fact that teams can score more quickly does not automatically lead to
+the conclusion that big comebacks should be more probable: if you are down and can
+score quickly, so can your opponent and keep you down. So while points are a little
+easier to come by, this effect is offset by the counter fact that they are also a
+little easier to give up.</p>
+</li>
 <li><p>I do think part of the problem is <a class="reference external" href="https://www.simplypsychology.org/availability-heuristic.html">availability bias</a>: that is, things
-that happen recently, especially ones you’ve witnessed personally, lead to the false
+that happen recently, especially ones you’ve witnessed personally, lead to the untrue
 conclusion that they are happening more often than in the past. An example of this
 phenomenon is that after people hear about a plane crash in the news, they think that
 plane crashes are getting more common.  After personally watching a series of garbage
 time games recently, I got to thinking “for sure this is an increasing phenomenon”.
-<a class="reference internal" href="occurs.html#comparing-occurs-eras"><span class="std std-ref">But when I look at the data</span></a> it’s almost constant
-(there are slightly more large deficit games but this is offset by a 2-point shift in
-a team’s chances of coming back).</p></li>
+<a class="reference internal" href="occurs.html#comparing-occurs-eras-garbage-time"><span class="std std-ref">But when I look at the data</span></a> it’s almost
+constant (there are slightly more large deficit games but this is offset by a 2-point
+shift in a team’s chances of coming back).</p></li>
 <li><p>I do want to compare the average size and min/max size of runs between the two eras.
 It may be that large swings are much more common, leading to a perception of
 increased chances of coming back. But here again, if it’s an option for you to go on
-a run, it’s also an option for your opponent.</p>
-<p>For another day.</p>
-</li>
+a run, it’s also an option for your opponent.  For another day.</p></li>
 </ul>
 </section>
 <section id="supplemental">
@@ -606,7 +616,6 @@ dramatic shift possible between something considered modern versus historical.</
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#are-big-leads-no-longer-safe">Are Big Leads No Longer Safe?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#win-percentages-when-max-deficit-is-n-or-more-points">Win Percentages When Max Deficit is N <em>Or More</em> Points</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#win-percentages-when-max-deficit-is-n-points-at-most">Win Percentages When Max Deficit is N Points At Most</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#win-percentages-when-teams-are-down-n-points-with-so-much-time-left">Win Percentages When Teams Are Down N Points With So Much Time Left</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#win-versus-time">Win % Versus Time</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#real-time-probabilities">Real Time Probabilities</a></li>

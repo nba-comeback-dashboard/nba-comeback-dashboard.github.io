@@ -31,15 +31,20 @@
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/colored_boxes.css?v=5ae21e15" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/colored_boxes.css?v=103e0ea0" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/toc_entry.css?v=c18cc440" />
     <link rel="stylesheet" type="text/css" href="../_static/css/nbacd.css?v=62283bc2" />
     <link rel="stylesheet" type="text/css" href="../_static/css/nbacd-media.css?v=6b9690a2" />
     <link rel="stylesheet" type="text/css" href="../_static/css/nbacd-dashboard.css?v=5fbb978c" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/basicLightbox/5.0.0/basicLightbox.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/css/bootstrap-select.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/colored_boxes.css?v=5ae21e15" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/pydata-customizations.css?v=1a338c58" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/colored_boxes.css?v=103e0ea0" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/pydata-customizations.css?v=bdb493fc" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/toc_entry.css?v=c18cc440" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/font_choice_4.css?v=efdf24e0" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/toc_entry_font_choice_4.css?v=32f887ec" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom_logo.css?v=abac4470" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -50,6 +55,7 @@
     <script src="../_static/documentation_options.js?v=5929fcd5"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/toc_entry_wrapper.js?v=8d6b754d"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-6Q6K588YXL"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -386,10 +392,15 @@ max points or more, which tells us the median game runs at least a 17-point defi
 <div id="occurs/all_time_max_or_more_48_point_margin" class="nbacd-chart"></div></section>
 <section id="garbage-time-games">
 <span id="id3"></span><h2>Garbage Time Games<a class="headerlink" href="#garbage-time-games" title="Link to this heading">#</a></h2>
+<p>There’s no exact definition of a garbage time game, so I am just going to propose a
+working one: being down so much at the 6-minute mark that you have a 1% or less chance
+of coming back.  That’s maybe to low (maybe 5% or 10% is better) but nevertheless it
+gives us a starting point.  With this definition in mind, let’s build up the data we
+need to count how often we get games that meet this criteria.</p>
 <p>We can now look at the point margins exactly at 6 minutes:</p>
 <div id="occurs/all_time_at_6_point_margin" class="nbacd-chart"></div><p>And again, integrating to get points down or more at 6 minutes:</p>
-<div id="occurs/all_time_at_or_more_6_point_margin" class="nbacd-chart"></div><p>And this can tell us some interesting things.  <a class="reference external" href="https://nba-comeback-dashboard.github.io/dashboard/index.html?p=2&amp;t=6&amp;s=1996-2024-B&amp;m=auto">From the dashboard</a>
-we can see that:</p>
+<div id="occurs/all_time_at_or_more_6_point_margin" class="nbacd-chart"></div><p>And this can tell us some interesting things.  <a class="reference external" href="https://nba-comeback-dashboard.github.io/dashboard/index.html?p=2&amp;t=6&amp;s=1996-2024-B&amp;m=auto">From the dashboard we can see</a>
+that:</p>
 <ul class="simple">
 <li><p>If you are down 15 points, you have about a 1% chance of coming back based on
 historical data from 1996.</p></li>
@@ -422,6 +433,12 @@ and that’s only 1.5% of all games where the deficit is 27 or more points start
 games since 1996.</p></li>
 </ul>
 <p>So it’s pretty rare you need to turn off the TV at halftime.</p>
+<p>Interestingly, for the playoffs the situation does not change by much.  <a class="reference external" href="https://nba-comeback-dashboard.github.io/dashboard/index.html?p=2&amp;t=6&amp;s=1996-2024-P&amp;m=auto">From the
+dashboard</a>
+the 1% point of combing back is again about 15 points.  And as we can see:</p>
+<div id="occurs/all_time_playoffs_at_or_more_6_point_margin" class="nbacd-chart"></div><p>about 29-30% of games meet this criteria, an increase of 1%.  This surprised me, as I
+would have guessed there would have been many more tighter, competitive games during
+the playoffs.</p>
 </section>
 <section id="comparing-old-school-1996-2016-to-modern-2017-2024">
 <span id="comparing-occurs-eras"></span><h2>Comparing Old School (1996-2016) to Modern (2017-2024)<a class="headerlink" href="#comparing-old-school-1996-2016-to-modern-2017-2024" title="Link to this heading">#</a></h2>
@@ -432,8 +449,8 @@ score in the modern era being about 111 points versus 97 in the past, a 14-point
 And this is a static shift in the mean of the data; the slope or standard deviation
 remains almost perfectly constant:</p>
 <div id="occurs/old_school_v_modern_scores" class="nbacd-chart"></div><div id="occurs/old_school_v_modern_scores_or_more" class="nbacd-chart"></div></section>
-<section id="id4">
-<h3>Max Points Down<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<section id="comparing-occurs-eras-max-points-down">
+<span id="id4"></span><h3>Max Points Down<a class="headerlink" href="#comparing-occurs-eras-max-points-down" title="Link to this heading">#</a></h3>
 <p>Looking at a chart comparing max points down or more:</p>
 <div id="occurs/old_school_v_modern_max_or_more_48_point_margin" class="nbacd-chart"></div><p>Now, teams fall down:</p>
 <ul class="simple">
@@ -443,8 +460,8 @@ remains almost perfectly constant:</p>
 not-quite-as-dramatic 1.31x increase (or about 31% more frequently).</p></li>
 </ul>
 </section>
-<section id="id5">
-<h3>Garbage Time Games<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<section id="comparing-occurs-eras-garbage-time">
+<span id="id5"></span><h3>Garbage Time Games<a class="headerlink" href="#comparing-occurs-eras-garbage-time" title="Link to this heading">#</a></h3>
 <p>Looking at max down or more at the 6-minute mark, we see a similar shift:</p>
 <div id="occurs/old_school_v_modern_at_or_more_6_point_margin" class="nbacd-chart"></div><p>But the amount of games where “it’s over” stays about the same: while there are more
 games with larger deficits, this is offset by modern teams being able to overcome about
@@ -481,8 +498,8 @@ games with larger deficits, this is offset by modern teams being able to overcom
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#garbage-time-games">Garbage Time Games</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparing-old-school-1996-2016-to-modern-2017-2024">Comparing Old School (1996-2016) to Modern (2017-2024)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shift-in-final-scores">Shift in Final Scores</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Max Points Down</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Garbage Time Games</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comparing-occurs-eras-max-points-down">Max Points Down</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comparing-occurs-eras-garbage-time">Garbage Time Games</a></li>
 </ul>
 </li>
 </ul>
