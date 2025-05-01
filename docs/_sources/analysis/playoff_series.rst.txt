@@ -73,17 +73,6 @@ somewhat rare feat:
 
 
 
-
-.. _how-big-a-deal-is-home-court-advantage:
-
-How Big A Deal is Home Court Advantage?
-=======================================
-
-.. raw:: html
-
-    <div id="playoff_series/playoff_series_all_time_home_v_away" class="nbacd-chart"></div>
-
-
 .. _odds-and-occurrence-by-playoff-round:
 
 Odds and Occurrence By Playoff Round
