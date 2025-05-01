@@ -380,21 +380,15 @@ team gets two quick stops on you and they race down, they throw it ahead and the
 hit two 3s. It’s a six-point game now. So 20 is the old 12; 12 is the old seven. I
 mean, there’s definitely an awareness from everybody that leads are not safe.”</p>
 </div></blockquote>
-<p>But is this true? In short… not really. While a statistically large and significant
-shift has occurred comparing new to old, the shift is more about 2 to 2.5 points, not 8.</p>
-<p>To frame this, I decided to break up the available play-by-play data into:</p>
-<ul class="simple">
-<li><p>1996-97 to 2016-17 (old-school) versus</p></li>
-<li><p>2017-18 to 2024-25 (modern)</p></li>
-</ul>
-<p>(<a class="reference internal" href="#deciding-on-eras-breakdown"><span class="std std-ref">As explained below</span></a>, a more targeted recent modern
-era does not change the analysis, so the larger dataset was chosen.  The change in
-increased scoring and comeback chances appears to start changing most drastically
-around 2016).</p>
-<p>Looking at this data, the chance of coming back from 20 points-or-more down (<code class="docutils literal notranslate"><span class="pre">~5.3%</span></code>)
+<p>But is this true? In short… not really. While a statistically significant shift has
+occurred comparing new to old, the shift is more about 2 to 2.5 points, not 8.</p>
+<p>To show this, let’s look at a chart showing the percent chance of coming back when a
+team is <a class="reference internal" href="understanding_and_using_the_plots.html#max-points-down-or-more"><span class="std std-ref">down N or more points at some point in a game</span></a>:</p>
+<div id="plots/old_school_v_modern/max_down_or_more_48" class="nbacd-chart"></div><p>Looking at this data, the chance of coming back from 20 points-or-more down (<code class="docutils literal notranslate"><span class="pre">~5.3%</span></code>)
 is about the same as coming back from 18 points-or-more down (<code class="docutils literal notranslate"><span class="pre">~4.9%</span></code>) in the earlier
-era. To put this in perspective, this overall 2 to 2.5 point shift is on par with but
-not quite as pronounced as <a class="reference internal" href="home_v_away.html"><span class="doc">the advantage a home team has over a road team</span></a> when attempting a comeback. Note, there are <a class="reference internal" href="understanding_and_using_the_plots.html"><span class="doc">many ways to
+era. And this shift remains fairly constant comparing other points on the graph.</p>
+<p>To put this in perspective, this overall 2 to 2.5 point shift is on par with but not
+quite as pronounced as <a class="reference internal" href="home_v_away.html"><span class="doc">the advantage a home team has over a road team</span></a> when attempting a comeback. Note, there are <a class="reference internal" href="understanding_and_using_the_plots.html"><span class="doc">many ways to
 compare the comeback chances of the eras</span></a>, but roughly 2 points is a fairly stable
 characterization of the shift under varying conditions.</p>
 <p>To be clear, there has been a marked shift in the data: there are about 1.8 times as
@@ -403,21 +397,41 @@ of a point spread in sports betting, a 2-3 point shift is significant.</p>
 <p>But as a fan watching the game, the data shows that leads are <em>roughly</em> as safe as they
 have been, perhaps needing an extra bucket to maintain the same level of security.</p>
 </section>
+<section id="breaking-down-the-eras">
+<span id="id2"></span><h2>Breaking Down The Eras<a class="headerlink" href="#breaking-down-the-eras" title="Link to this heading">#</a></h2>
+<p>To frame this, I decided to break up the available play-by-play data into:</p>
+<ul class="simple">
+<li><p>1996-97 to 2016-17 (old-school) versus</p></li>
+<li><p>2017-18 to 2024-25 (modern)</p></li>
+</ul>
+<p>The change in increased scoring and comeback chances appears to start changing most
+dramatically around 2016. And if you:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="plots/old_old_school_v_old_school.html"><span class="doc">Break up the old school eras into two even decades from 1996-2006 v 2007-2016</span></a> you can see there is very little shift
+in the numbers.</p></li>
+<li><p>Similarly, if you <a class="reference internal" href="plots/new_school_v_new_new_school.html"><span class="doc">break up the modern era into the more fine-grained 4 year
+chunks of 2017-2020 v 2021-2024</span></a> you
+again see very little difference.</p></li>
+</ul>
+<p>So – always wanting as many games as possible to reduce the statistical noise – I
+felt that was the fairest breakdown: <a class="reference internal" href="plots/old_school_v_modern.html"><span class="doc">1996-2016 v
+2017-2024</span></a>.</p>
+</section>
 <section id="win-percentages-when-max-deficit-is-n-or-more-points">
-<span id="id2"></span><h2>Win Percentages When Max Deficit is N <em>Or More</em> Points<a class="headerlink" href="#win-percentages-when-max-deficit-is-n-or-more-points" title="Link to this heading">#</a></h2>
-<p><a class="reference internal" href="understanding_and_using_the_plots.html#max-points-down-or-more"><span class="std std-ref">A very common way of looking at comebacks</span></a> is
-calculating the % chance of coming back from down N points <em>or more</em> over an entire
+<span id="id3"></span><h2>Win Percentages When Max Deficit is N <em>Or More</em> Points<a class="headerlink" href="#win-percentages-when-max-deficit-is-n-or-more-points" title="Link to this heading">#</a></h2>
+<p>Again, looking at a chart of comeback odds versus being down N or more points over a
 game:</p>
-<div id="plots/old_school_v_modern/max_down_or_more_48" class="nbacd-chart"></div><p>An insight is that percent chance of coming back versus point deficit is normally
-distributed under most conditions.  So when plotted on a <a class="reference external" href="https://en.wikipedia.org/wiki/Normal_probability_plot">normal probability plot</a> and <a class="reference internal" href="methodology_forming_the_plot_trend_lines.html"><span class="doc">trend lines (e.g. a
-normal model) are fit to the statistical data</span></a> one can then better examine the
-lower probability events and also more easily compare different eras or situations.</p>
+<div id="plots/old_school_v_modern/max_down_or_more_48" class="nbacd-chart"></div><p>The percent chance of coming back versus point deficit is fairly normally distributed
+under most conditions. So when plotted on a <a class="reference external" href="https://en.wikipedia.org/wiki/Normal_probability_plot">normal probability plot</a> and <a class="reference internal" href="methodology_forming_the_plot_trend_lines.html"><span class="doc">normal trend lines
+are fit to the statistical data</span></a>
+one can then better examine the lower probability events and also more easily compare
+different eras or situations.</p>
 <p>And when comparing these two eras, one can see a mostly stable and constant shift of
 about 2-3 points to the left for the modern era versus the past.</p>
 <p>You can <a class="reference internal" href="understanding_and_using_the_plots.html#using-the-plot-controls"><span class="std std-ref">interact with this chart</span></a> and hover over and
 click the points to see which games compose a point and compare it with a <a class="reference external" href="https://en.wikipedia.org/wiki/Comeback_(sports)#NBA">list of
 biggest comebacks</a> if so
-inclined (on mobile, go full screen before clicking).  To focus on a few we get:</p>
+inclined (on mobile, go full screen before clicking). To focus on a few we get:</p>
 <div class="pst-scrollable-table-container"><table class="table" id="id8">
 <caption><span class="caption-text">Win % Increases When Comparing Modern Versus Old School Eras</span><a class="headerlink" href="#id8" title="Link to this table">#</a></caption>
 <thead>
@@ -454,9 +468,7 @@ inclined (on mobile, go full screen before clicking).  To focus on a few we get:
 <p>So while coming back from down 30 or more happens 2.8 times more often than in the
 past, it’s still very unlikely. In fact, you need to move over a little less than one
 three-pointer to get about the same chance: in the old school era, if you were down -27
-or more there was about a <code class="docutils literal notranslate"><span class="pre">~0.50%</span></code> chance of winning. And being down 20 or more now
-has just about the same chance of winning as being down 18 or more back in the day
-(<code class="docutils literal notranslate"><span class="pre">~5.0%</span></code>).</p>
+or more there was about a <code class="docutils literal notranslate"><span class="pre">~0.50%</span></code> chance of winning.</p>
 <div class="box-container green-box docutils container">
 <p>Note, this uses the raw data points, which is a little more intuitive. You can also
 do this using the trend line in the chart, which cleans up the noise in the data
@@ -465,14 +477,9 @@ and is statistically more accurate. Overall, either way draws the same conclusio
 <p>As time dwindles, this shift is slightly smaller. Looking at biggest 4th quarter
 comebacks we get:</p>
 <div id="plots/old_school_v_modern/max_down_or_more_12" class="nbacd-chart"></div><p>Now, the shift is about 1.5 points, an even smaller shift.</p>
-<p>To me at least, looking at the point shift gives me a better feel for how dramatically
-(or not) the game has changed. I can be convinced you could look at it both ways (Win %
-Increase is more dramatic, point shift is more modest), but as a fan watching your team
-sink into a 20 point hole, I don’t think the data is telling you to say “20 points,
-that’s nothing anymore”.</p>
 </section>
 <section id="win-percentages-when-teams-are-down-n-points-with-so-much-time-left">
-<span id="id3"></span><h2>Win Percentages When Teams Are Down N Points With So Much Time Left<a class="headerlink" href="#win-percentages-when-teams-are-down-n-points-with-so-much-time-left" title="Link to this heading">#</a></h2>
+<span id="id4"></span><h2>Win Percentages When Teams Are Down N Points With So Much Time Left<a class="headerlink" href="#win-percentages-when-teams-are-down-n-points-with-so-much-time-left" title="Link to this heading">#</a></h2>
 <p><a class="reference internal" href="understanding_and_using_the_plots.html#points-down-at-time"><span class="std std-ref">Another way to look at it and the more natural way to think about it while you
 are watching a game live</span></a> (as opposed to describing a game after
 the fact) is to look at the win percentages when teams are down <em>exactly</em> N points with
@@ -483,7 +490,7 @@ school era, we have the case that there was one game (<code class="docutils lite
 <span class="pre">103-107</span></code>) where UTA was down -34 at the half and won. But no team in that era won when
 down <em>exactly</em> -33, -32, -31, -30 or -29 at the half.</p>
 <p>Now, the divide here is no longer as much of a shift as a change in slope of about 20%
-more for the modern era.  So being down 20 in the modern era is about the same as being
+more for the modern era. So being down 20 in the modern era is about the same as being
 down 16.75 points in the old school era (a 3.25 point shift). And being down 10 points
 now is the same as being down 8.5 points in the past (a 1.5 point shift).</p>
 <p>But as time decreases it tightens up – looking at starting the 4th quarter we see that
@@ -493,54 +500,53 @@ the same as 17.75 points down when comparing new to old:</p>
 <section id="win-versus-time">
 <span id="is-18-win-versus-time"></span><h2>Win % Versus Time<a class="headerlink" href="#win-versus-time" title="Link to this heading">#</a></h2>
 <p>Collecting this data for every minute, <a class="reference internal" href="understanding_and_using_the_plots.html#percent-chance-of-winning-time-v-points-down"><span class="std std-ref">we can focus on a single percentage and
-plot the time v point deficit for that percentage</span></a>.  Doing that for 10% while comparing
-the eras we get:</p>
+plot the time v point deficit for that percentage</span></a>. Doing that for 10% while comparing the
+eras we get:</p>
 <div id="plots/old_school_v_modern/percent_plot_10_percent" class="nbacd-chart"></div><p>And doing it for 1% we get:</p>
 <div id="plots/old_school_v_modern/percent_plot_1_percent" class="nbacd-chart"></div><p>The point spread changes over time, but between 2 - 3 points is a fairly good
 characterization.</p>
 </section>
 <section id="real-time-probabilities">
-<span id="id4"></span><h2>Real Time Probabilities<a class="headerlink" href="#real-time-probabilities" title="Link to this heading">#</a></h2>
+<span id="id5"></span><h2>Real Time Probabilities<a class="headerlink" href="#real-time-probabilities" title="Link to this heading">#</a></h2>
 <p>One interesting way to look at the data is to show what the running probabilities would
-be using data from the modern era versus the past.  Note, this probability calculator
+be using data from the modern era versus the past. Note, this probability calculator
 doesn’t account for team or player strength or home court advantage – it’s based
 solely on win/loss data from the specified time ranges.</p>
 <div id="20_18/espn_v_dashboard_old_school_v_modern_min_at_lal_401767915" class="nbacd-chart"></div><p>So at halftime, the wolves had 12.9% chance of winning using modern data versus a 9.1%
 chance if you use data from the past.</p>
 <p>Here’s another game:</p>
 <div id="20_18/espn_v_dashboard_old_school_v_modern_min_at_bucks_401705718" class="nbacd-chart"></div><p>The same basic trend emerges: from a statistical standpoint, there are notable large
-shifts in percentages comparing the eras (3-4% in some cases).  But the shift is not
-large enough to greatly effect how it “feels” as a fan to be down, say, 15 points at
+shifts in percentages comparing the eras (3-4% in some cases). But the shift is not
+large enough to greatly affect how it “feels” as a fan to be down, say, 15 points at
 the half.</p>
 </section>
 <section id="what-an-8-point-shift-looks-like">
-<span id="id5"></span><h2>What An 8 Point Shift Looks Like<a class="headerlink" href="#what-an-8-point-shift-looks-like" title="Link to this heading">#</a></h2>
-<p>When I started to compare the modern versus old school eras, I was expecting (based on
-the current perception out there) that the shift was going to be large.  When it
-wasn’t, I assumed there were simply bugs in my setup and I spent a lot of time sanity
-checking the results (and, if I still have mistakes, lines are open).</p>
-<p>In that context, I thought it would be useful to get a sense of what an 8 point shift
-looks like and the kind of trend I was expecting to see.  So if we look at top 10 teams
-(out of 30) vs. bottom 10 teams in the modern era we get:</p>
-<div id="20_18/dramatic" class="nbacd-chart"></div><p>Here, the chance of top ten team playing a bottom 10 team coming back from a
+<span id="id6"></span><h2>What An 8 Point Shift Looks Like<a class="headerlink" href="#what-an-8-point-shift-looks-like" title="Link to this heading">#</a></h2>
+<p>I thought it would be useful to get a sense of what an 8 point shift looks like and the
+kind of trend I was expecting to see. So if we look at top 10 teams (out of 30) vs.
+bottom 10 teams in the modern era we get:</p>
+<div id="20_18/dramatic" class="nbacd-chart"></div><p>Here, the chance of a top ten team playing a bottom 10 team coming back from a
 20-points-or-more deficit (<code class="docutils literal notranslate"><span class="pre">~20%</span></code>) is about the same for any team coming back from 12
-or more down against any other team.</p>
+or more down against any other team. And, over the last 8 years, the chance of coming
+back from 15 points or more is about 13% – but for a top ten team playing a bottom ten
+team, it’s about 34%. That feels very different and is what an 8 point shift in the
+data would foretell.</p>
 </section>
 <section id="what-else-could-be-going-on">
-<span id="id6"></span><h2>What Else Could Be Going On?<a class="headerlink" href="#what-else-could-be-going-on" title="Link to this heading">#</a></h2>
-<p>Blowing a 20-point lead now has about the same chances as blowing a 17 or 18-point lead
+<span id="id7"></span><h2>What Else Could Be Going On?<a class="headerlink" href="#what-else-could-be-going-on" title="Link to this heading">#</a></h2>
+<p>Blowing a 20-point lead now has about the same chances as blowing a 17 to 18-point lead
 in the past. This two to three point shift is significant but I don’t think matches
 what <a class="reference external" href="https://www.reddit.com/r/nba/comments/1cc2qqv/dumb_question_is_blowing_a_20_point_lead_that_bad/">I see people saying about leads these days</a>.</p>
 <p>So I just want to consider a few points that I think are useful when thinking about
 this issue:</p>
 <ul>
 <li><p>Sometimes people refer to the increase in percent chance, which is large, but overall
-the percent shift is not dramatic enough to support the narrative.  For example, the
+the percent shift is not dramatic enough to support the narrative. For example, the
 percent of times a team came back from 15 or more down is about 12.8% recently
-compared to 9.2% in the past.  While that’s an increase of about 40%, I don’t think
-having a 12.8% chance versus a 9.2% change gives you a markedly different feeling
-about the game.  If you <a class="reference internal" href="#what-an-8-point-shift-looks-like"><span class="std std-ref">compare that to the 8 point shift graph</span></a>, here the percent chance is about 34% for a top
-10 team to comeback 15 or more against a bottom ten team over the last 8 years.  That
+compared to 9.2% in the past. While that’s an increase of about 40%, I don’t think
+having a 12.8% chance versus a 9.2% chance gives you a markedly different feeling
+about the game. If you <a class="reference internal" href="#what-an-8-point-shift-looks-like"><span class="std std-ref">compare that to the 8 point shift graph</span></a>, here the percent chance is about 34% for a top
+10 team to comeback 15 or more against a bottom ten team over the last 8 years. That
 is dramatic and would warrant the kind of talk of “a 15 point lead doesn’t matter
 anymore”.</p></li>
 <li><p>Scoring is up dramatically. <a class="reference internal" href="occurs.html#comparing-occurs-eras"><span class="std std-ref">The median score is 111 points in the modern era</span></a> as compared to 97 in the past: a 14-point shift. Also,
@@ -557,7 +563,7 @@ little easier to give up.</p>
 that happen recently, especially ones you’ve witnessed personally, lead to the untrue
 conclusion that they are happening more often than in the past. An example of this
 phenomenon is that after people hear about a plane crash in the news, they think that
-plane crashes are getting more common.  After personally watching a series of garbage
+plane crashes are getting more common. After personally watching a series of garbage
 time games recently, I got to thinking “for sure this is an increasing phenomenon”.
 <a class="reference internal" href="occurs.html#comparing-occurs-eras-garbage-time"><span class="std std-ref">But when I look at the data</span></a> it’s almost
 constant (there are slightly more large deficit games but this is offset by a 2-point
@@ -565,26 +571,8 @@ shift in a team’s chances of coming back).</p></li>
 <li><p>I do want to compare the average size and min/max size of runs between the two eras.
 It may be that large swings are much more common, leading to a perception of
 increased chances of coming back. But here again, if it’s an option for you to go on
-a run, it’s also an option for your opponent.  For another day.</p></li>
+a run, it’s also an option for your opponent. For another day.</p></li>
 </ul>
-</section>
-<section id="supplemental">
-<span id="id7"></span><h2>Supplemental<a class="headerlink" href="#supplemental" title="Link to this heading">#</a></h2>
-<section id="why-i-chose-my-years-breakdown">
-<span id="deciding-on-eras-breakdown"></span><h3>Why I Chose My Years Breakdown<a class="headerlink" href="#why-i-chose-my-years-breakdown" title="Link to this heading">#</a></h3>
-<p>If you:</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="plots/old_old_school_v_old_school.html"><span class="doc">Break up the old school eras into two even decades from 1996-2006 v 2007-2016</span></a> you can see there is very little shift
-in the numbers.</p></li>
-<li><p>Similarly, if you <a class="reference internal" href="plots/new_school_v_new_new_school.html"><span class="doc">break up the modern era into the more fine-grained 4 year
-chunks of 2017-2020 v 2021-2024</span></a> you
-again see very little difference.</p></li>
-</ul>
-<p>So – always wanting as many games as possible to reduce the statistical noise – I
-felt that was the fairest breakdown: <a class="reference internal" href="plots/old_school_v_modern.html"><span class="doc">1996-2016 v
-2017-2024</span></a>.  I also tried to create the most
-dramatic shift possible between something considered modern versus historical.</p>
-</section>
 </section>
 </section>
 
@@ -612,16 +600,13 @@ dramatic shift possible between something considered modern versus historical.</
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#are-big-leads-no-longer-safe">Are Big Leads No Longer Safe?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#breaking-down-the-eras">Breaking Down The Eras</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#win-percentages-when-max-deficit-is-n-or-more-points">Win Percentages When Max Deficit is N <em>Or More</em> Points</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#win-percentages-when-teams-are-down-n-points-with-so-much-time-left">Win Percentages When Teams Are Down N Points With So Much Time Left</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#win-versus-time">Win % Versus Time</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#real-time-probabilities">Real Time Probabilities</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-an-8-point-shift-looks-like">What An 8 Point Shift Looks Like</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-else-could-be-going-on">What Else Could Be Going On?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#supplemental">Supplemental</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-i-chose-my-years-breakdown">Why I Chose My Years Breakdown</a></li>
-</ul>
-</li>
 </ul>
   </nav></div>
 

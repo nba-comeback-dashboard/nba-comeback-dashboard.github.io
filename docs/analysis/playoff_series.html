@@ -378,13 +378,132 @@ have come back, leading to about a 5% chance of a series comeback if you fall do
 Also notable: teams that fall down 0-1 only have about a 1 in 4 chance of winning. And
 we’re still waiting for someone to come back from a 0-3 hole.</p>
 <p>We can also plot the occurrence rates of each series score:</p>
-<div id="playoff_series/playoff_series_all_time_occurs" class="nbacd-chart"></div><p>This shows that 17% of series have been 4-0 sweeps. Also surprising, in nearly 60% of
-series teams fall down 0-2 and, using the chart above, only have a 10% chance of coming
-back (i.e., most series are over quickly – which isn’t surprising when you think of
-the mismatches in the beginning rounds).</p>
+<div id="playoff_series/playoff_series_all_time_occurs" class="nbacd-chart"></div><p>Note, these charts can be mirrored – so if you are up 3-2 in the series you have about
+an 82% chance of closing it out (100% - 18%). And the occurrence rate of 3-2 series is
+equal to the occurrence rate of 2-3 series - they happen about 54% of the time.</p>
 </section>
+<section id="how-many-garbage-time-series">
+<span id="garbage-time-series"></span><h2>How Many Garbage Time Series?<a class="headerlink" href="#how-many-garbage-time-series" title="Link to this heading">#</a></h2>
+<p>The above chart shows, among many other things, that:</p>
+<ul class="simple">
+<li><p>18% of series have been 4-0 sweeps and in 28% of series teams fall into a 0-3 hole,
+a virtual playoffs death sentence.</p></li>
+<li><p>Surprisingly, in nearly 60% of series the away team fall downs 0-2 to the home
+team. And despite this supposedly being the normal state of affairs of just holding
+home court advantage, it’s a very bad place to be: using the chart above, you only
+have about a 10% chance of coming back if you fall down 0-2. Which means the majority
+of series are not very competitive.</p></li>
+</ul>
+<p>On the happy side, this should be contrasted with the fact that:</p>
+<ul class="simple">
+<li><p>About 60% of series do get tied up at some point (individual tied series scores also
+shown).</p></li>
+</ul>
+<p>With so many 0-2 starts, how can we square this?  Well, of those 216 0-2 starts, 65 of
+those away teams have come back and evened up the series at some point, or about 35% of
+the time.</p>
+<p>However, there have only been 21 teams that have come back from an 0-2 hole. So that
+means that even if a team ties of the series, they still only have a 21 out of 65 or a
+32% chance of winning. I would have thought that if a team fell down 0-2 and then tied
+it up momentum would have been on their side, but turns out that they are still behind
+in the odds.</p>
+<p>To check these numbers, I made a list of the 21 teams that have pulled off this
+somewhat rare feat:</p>
+<style>
+    .playoff-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: Arial, sans-serif;
+        margin: 20px 0;
+    }
+    .playoff-table th {
+        background-color: #f2f2f2;
+        padding: 8px 12px;
+        text-align: left;
+        font-weight: bold;
+        border: 1px solid #ddd;
+    }
+    .playoff-table td {
+        padding: 6px 12px;
+        border: 1px solid #ddd;
+    }
+    .playoff-table tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+    .playoff-table a {
+        color: #0066cc;
+        text-decoration: none;
+    }
+    .playoff-table a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<table class="playoff-table">
+    <tr>
+        <th colspan="2">NBA Finals</th>
+    </tr>
+    <tr>
+        <td><a href="https://www.basketball-reference.com/playoffs/2021-nba-finals-bucks-vs-suns.html">2021 Finals Bucks Vs. Suns</a></td>
+        <td><a href="https://www.basketball-reference.com/playoffs/2006-nba-finals-heat-vs-mavericks.html">2006 Finals Heat Vs. Mavericks</a></td>
+    </tr>
+    <tr>
+        <td colspan="2"><a href="https://www.basketball-reference.com/playoffs/2016-nba-finals-cavaliers-vs-warriors.html">2016 Finals Cavaliers Vs. Warriors</a></td>
+    </tr>
+
+    <tr>
+        <th colspan="2">Conference Finals</th>
+    </tr>
+    <tr>
+        <td><a href="https://www.basketball-reference.com/playoffs/2018-nba-eastern-conference-finals-cavaliers-vs-celtics.html">2018 Eastern Conference Finals Cavaliers Vs. Celtics</a></td>
+        <td><a href="https://www.basketball-reference.com/playoffs/2007-nba-eastern-conference-finals-cavaliers-vs-pistons.html">2007 Eastern Conference Finals Cavaliers Vs. Pistons</a></td>
+    </tr>
+    <tr>
+        <td><a href="https://www.basketball-reference.com/playoffs/2012-nba-western-conference-finals-thunder-vs-spurs.html">2012 Western Conference Finals Thunder Vs. Spurs</a></td>
+        <td><a href="https://www.basketball-reference.com/playoffs/2019-nba-eastern-conference-finals-raptors-vs-bucks.html">2019 Eastern Conference Finals Raptors Vs. Bucks</a></td>
+    </tr>
+
+    <tr>
+        <th colspan="2">Second Round</th>
+    </tr>
+    <tr>
+        <td><a href="https://www.basketball-reference.com/playoffs/2024-nba-eastern-conference-semifinals-pacers-vs-knicks.html">2024 Eastern Conference Semifinals Pacers Vs. Knicks</a></td>
+        <td><a href="https://www.basketball-reference.com/playoffs/2008-nba-western-conference-semifinals-spurs-vs-hornets.html">2008 Western Conference Semifinals Spurs Vs. Hornets</a></td>
+    </tr>
+    <tr>
+        <td><a href="https://www.basketball-reference.com/playoffs/2021-nba-eastern-conference-semifinals-bucks-vs-nets.html">2021 Eastern Conference Semifinals Bucks Vs. Nets</a></td>
+        <td><a href="https://www.basketball-reference.com/playoffs/2021-nba-western-conference-semifinals-clippers-vs-jazz.html">2021 Western Conference Semifinals Clippers Vs. Jazz</a></td>
+    </tr>
+    <tr>
+        <td><a href="https://www.basketball-reference.com/playoffs/2022-nba-western-conference-semifinals-mavericks-vs-suns.html">2022 Western Conference Semifinals Mavericks Vs. Suns</a></td>
+        <td><a href="https://www.basketball-reference.com/playoffs/2004-nba-western-conference-semifinals-lakers-vs-spurs.html">2004 Western Conference Semifinals Lakers Vs. Spurs</a></td>
+    </tr>
+
+    <tr>
+        <th colspan="2">First Round</th>
+    </tr>
+    <tr>
+        <td><a href="https://www.basketball-reference.com/playoffs/2023-nba-western-conference-first-round-warriors-vs-kings.html">2023 Western Conference First Round Warriors Vs. Kings</a></td>
+        <td><a href="https://www.basketball-reference.com/playoffs/2021-nba-western-conference-first-round-mavericks-vs-clippers.html">2021 Western Conference First Round Mavericks Vs. Clippers</a></td>
+    </tr>
+    <tr>
+        <td><a href="https://www.basketball-reference.com/playoffs/2017-nba-eastern-conference-first-round-bulls-vs-celtics.html">2017 Eastern Conference First Round Bulls Vs. Celtics</a></td>
+        <td><a href="https://www.basketball-reference.com/playoffs/2007-nba-western-conference-first-round-jazz-vs-rockets.html">2007 Western Conference First Round Jazz Vs. Rockets</a></td>
+    </tr>
+    <tr>
+        <td><a href="https://www.basketball-reference.com/playoffs/2013-nba-western-conference-first-round-grizzlies-vs-clippers.html">2013 Western Conference First Round Grizzlies Vs. Clippers</a></td>
+        <td><a href="https://www.basketball-reference.com/playoffs/2016-nba-western-conference-first-round-trail-blazers-vs-clippers.html">2016 Western Conference First Round Trail Blazers Vs. Clippers</a></td>
+    </tr>
+    <tr>
+        <td><a href="https://www.basketball-reference.com/playoffs/2005-nba-western-conference-first-round-rockets-vs-mavericks.html">2005 Western Conference First Round Rockets Vs. Mavericks</a></td>
+        <td><a href="https://www.basketball-reference.com/playoffs/2005-nba-eastern-conference-first-round-wizards-vs-bulls.html">2005 Eastern Conference First Round Wizards Vs. Bulls</a></td>
+    </tr>
+</table></section>
+<section id="how-big-a-deal-is-home-court-advantage">
+<span id="id1"></span><h2>How Big A Deal is Home Court Advantage?<a class="headerlink" href="#how-big-a-deal-is-home-court-advantage" title="Link to this heading">#</a></h2>
+<div id="playoff_series/playoff_series_all_time_home_v_away" class="nbacd-chart"></div></section>
 <section id="odds-and-occurrence-by-playoff-round">
-<span id="id1"></span><h2>Odds and Occurrence By Playoff Round<a class="headerlink" href="#odds-and-occurrence-by-playoff-round" title="Link to this heading">#</a></h2>
+<span id="id2"></span><h2>Odds and Occurrence By Playoff Round<a class="headerlink" href="#odds-and-occurrence-by-playoff-round" title="Link to this heading">#</a></h2>
 <section id="st-and-2nd-round">
 <h3>1st and 2nd Round<a class="headerlink" href="#st-and-2nd-round" title="Link to this heading">#</a></h3>
 <p>We can now compare the 1st and 2nd rounds over the same time period:</p>
@@ -393,13 +512,20 @@ the mismatches in the beginning rounds).</p>
 <h3>Conference Finals and Finals<a class="headerlink" href="#conference-finals-and-finals" title="Link to this heading">#</a></h3>
 <p>We can also now compare the Conference Finals versus the Finals over the same time
 period:</p>
-<div id="playoff_series/playoff_series_all_time_by_round_3_4" class="nbacd-chart"></div><div id="playoff_series/playoff_series_all_time_by_round_3_4_occurs" class="nbacd-chart"></div><p>An amazing 18% of the Conference Finals since the 1996-1997 season have been sweeps.
-And 3 Finals out of the last 28– or over 10% – have also been sweeps.  And only 4 of
-the 28 Finals have gone 7 games.</p>
+<div id="playoff_series/playoff_series_all_time_by_round_3_4" class="nbacd-chart"></div><div id="playoff_series/playoff_series_all_time_by_round_3_4_occurs" class="nbacd-chart"></div><p>Here:</p>
+<ul class="simple">
+<li><p>An amazing 18% of the Conference Finals since the 1996-1997 season have been sweeps.</p></li>
+<li><p>3 Finals out of the last 28 – or over 10% – have also been sweeps.</p></li>
+<li><p>Only 4 of the 28 Finals have gone 7 games.</p></li>
+<li><p>And even for the Conference Finals, in nearly 60% of series a team falls down 0-2
+and has only a 12% chance of coming back to win.  And it’s not that much better for
+the Finals.  It is surprising that this stat does not change much as you compare the
+different rounds of the playoffs.</p></li>
+</ul>
 </section>
 </section>
 <section id="comparing-old-school-versus-modern-eras">
-<span id="id2"></span><h2>Comparing Old School Versus Modern Eras<a class="headerlink" href="#comparing-old-school-versus-modern-eras" title="Link to this heading">#</a></h2>
+<span id="id3"></span><h2>Comparing Old School Versus Modern Eras<a class="headerlink" href="#comparing-old-school-versus-modern-eras" title="Link to this heading">#</a></h2>
 <p>There’s not much here, but because it was easy to do I plotted the same charts
 <a class="reference internal" href="20_is_new_18.html"><span class="doc">comparing the eras</span></a>:</p>
 <div id="playoff_series/playoff_series_old_school_versus_modern" class="nbacd-chart"></div><div id="playoff_series/playoff_series_old_school_versus_modern_occurs" class="nbacd-chart"></div><p>This shows that coming back from 0-2 now (15.25%) is about twice as likely as in the
@@ -407,12 +533,12 @@ past (7.64%). There’s not a ton of data points here, so some or most of this c
 be noise, but that data is presented here for one to speculate.</p>
 </section>
 <section id="notes-on-win-plot">
-<span id="id3"></span><h2>Notes on Win % Plot<a class="headerlink" href="#notes-on-win-plot" title="Link to this heading">#</a></h2>
+<span id="id4"></span><h2>Notes on Win % Plot<a class="headerlink" href="#notes-on-win-plot" title="Link to this heading">#</a></h2>
 <p>When ‘Win % Versus Series Score’ is plotted on a <a class="reference external" href="https://en.wikipedia.org/wiki/Normal_probability_plot">normal probability plot</a>, the data is fairly normally
-distributed (with really only the 0-1 chances throwing off the normality). This is just
-more of a curiosity than anything else. I did this by using this mapping:</p>
-<div class="pst-scrollable-table-container"><table class="table" id="id4">
-<caption><span class="caption-text">Series Score Mapping</span><a class="headerlink" href="#id4" title="Link to this table">#</a></caption>
+distributed (with really only the 0-1 chances throwing off the normality). I did this
+by using this mapping:</p>
+<div class="pst-scrollable-table-container"><table class="table" id="id5">
+<caption><span class="caption-text">Series Score Mapping</span><a class="headerlink" href="#id5" title="Link to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Series Score</p></th>
 <th class="head"><p>Integer Value</p></th>
@@ -470,6 +596,8 @@ more of a curiosity than anything else. I did this by using this mapping:</p>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comeback-odds-occurrence-rate-versus-a-seven-game-series-deficit">Comeback Odds / Occurrence Rate Versus A Seven Game Series Deficit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-many-garbage-time-series">How Many Garbage Time Series?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-big-a-deal-is-home-court-advantage">How Big A Deal is Home Court Advantage?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#odds-and-occurrence-by-playoff-round">Odds and Occurrence By Playoff Round</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#st-and-2nd-round">1st and 2nd Round</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conference-finals-and-finals">Conference Finals and Finals</a></li>
