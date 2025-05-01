@@ -74,7 +74,7 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/js/bootstrap-select.min.js"></script>
-    <script src="../_static/js/nbacd_utils.js?v=515b643b"></script>
+    <script src="../_static/js/nbacd_utils.js?v=bfd8e227"></script>
     <script src="../_static/js/nbacd_saveas_image_dialog.js?v=e8366de8"></script>
     <script src="../_static/js/nbacd_plotter_plugins.js?v=1b57b8fa"></script>
     <script src="../_static/js/nbacd_dashboard_num.js?v=3c327ede"></script>
@@ -85,8 +85,8 @@
     <script src="../_static/js/nbacd_dashboard_season_game_loader.js?v=c37d4940"></script>
     <script src="../_static/js/nbacd_dashboard_plot_primitives.js?v=4160a574"></script>
     <script src="../_static/js/nbacd_dashboard_api.js?v=2e69637f"></script>
-    <script src="../_static/js/nbacd_dashboard_state.js?v=f076e384"></script>
-    <script src="../_static/js/nbacd_dashboard_ui.js?v=67074b87"></script>
+    <script src="../_static/js/nbacd_dashboard_state.js?v=9ad08154"></script>
+    <script src="../_static/js/nbacd_dashboard_ui.js?v=597245b5"></script>
     <script src="../_static/js/nbacd_dashboard_init.js?v=4612a8d0"></script>
     <link rel="icon" href="../_static/nbacd_v2.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -369,8 +369,9 @@
 <section id="largest-and-smallest-final-scores">
 <span id="id1"></span><h2>Largest and Smallest Final Scores<a class="headerlink" href="#largest-and-smallest-final-scores" title="Link to this heading">#</a></h2>
 <p>The probability density function of the final score for each team of every game since
-1996 is shown below. Remarkably, the 1st and 2nd records since 1996 come from the same
-game – <a class="reference external" href="https://www.nba.com/game/0022200902">a double overtime win by Kings over the Clippers 176-175 on 02/24/2023</a>.</p>
+1996 is shown below. Remarkably, the 1st and 2nd highest scores since 1996 come from
+the same game – <a class="reference external" href="https://www.nba.com/game/0022200902">a double overtime win by the Kings over the Clippers 176-175 on
+02/24/2023</a>.</p>
 <div id="occurs/all_time_scores" class="nbacd-chart"></div><p>Cumulating the probabilities from left to right gives us this plot, which tells us the
 median score of an NBA game since 1996 is 101 points.</p>
 <div id="occurs/all_time_scores_or_more" class="nbacd-chart"></div></section>
@@ -381,8 +382,8 @@ is the probability density function, which tells us that:</p>
 <ul class="simple">
 <li><p>The tightest games ever since 1996 have been within 5 points for the entire game, and
 it’s happened 8 times.</p></li>
-<li><p>Only about 1,000 games out of 36,000 have been within 8 for the entire game.</p></li>
-<li><p>And the biggest blowout ever got up to a whopping 78-point deficit.</p></li>
+<li><p>Only about 1,000 games out of 36,000 have been within 8 points for the entire game.</p></li>
+<li><p>And the biggest blowout ever reached a whopping 78-point deficit.</p></li>
 </ul>
 <div id="occurs/all_time_max_48_point_margin" class="nbacd-chart"></div><p>And we can integrate it again from left to right to get the probability of being down
 max points or more, which tells us the median game runs at least a 17-point deficit.</p>
@@ -391,18 +392,17 @@ max points or more, which tells us the median game runs at least a 17-point defi
 <span id="id3"></span><h2>Garbage Time Games<a class="headerlink" href="#garbage-time-games" title="Link to this heading">#</a></h2>
 <p>There’s no exact definition of a garbage time game, so I am just going to propose a
 working one: being down so much at the 6-minute mark that you have a 1% or less chance
-of coming back.  That’s maybe too low (maybe 5% or 10% is better) but nevertheless it
-gives us a starting point.  With this definition in mind, let’s build up the data we
-need to count how often we get games that meet this criteria.</p>
+of coming back. With this definition in mind, let’s build up the data we need to count
+how often we get games that meet this criterion.</p>
 <p>We can now look at the point margins exactly at 6 minutes:</p>
 <div id="occurs/all_time_at_6_point_margin" class="nbacd-chart"></div><p>And again, integrating to get points down or more at 6 minutes:</p>
-<div id="occurs/all_time_at_or_more_6_point_margin" class="nbacd-chart"></div><p>And this can tell us some interesting things.  <a class="reference external" href="https://nba-comeback-dashboard.github.io/dashboard/index.html?p=2&amp;t=6&amp;s=1996-2024-B&amp;m=auto">From the dashboard we can see</a>
+<div id="occurs/all_time_at_or_more_6_point_margin" class="nbacd-chart"></div><p>And this can tell us some interesting things. <a class="reference external" href="https://nba-comeback-dashboard.github.io/dashboard/index.html?p=3&amp;t=6&amp;s=1996-2024-B&amp;m=auto">From the dashboard we can see</a>
 that:</p>
 <ul class="simple">
 <li><p>If you are down 15 points, you have about a 1% chance of coming back based on
 historical data from 1996.</p></li>
-<li><p>The record since 1996 was the Kings came back after being down 22 points at the six-
-minute mark and it was given up by our <a class="reference external" href="https://www.nba.com/game/0021900696">Minnesota Timberwolves on 1/27/2020</a>.</p></li>
+<li><p>The record since 1996 was when the Kings came back after being down 22 points at the
+six-minute mark. It was given up by our <a class="reference external" href="https://www.nba.com/game/0021900696">Minnesota Timberwolves on 1/27/2020</a>.</p></li>
 </ul>
 <p>Using those two numbers we can say:</p>
 <ul class="simple">
@@ -410,35 +410,38 @@ minute mark and it was given up by our <a class="reference external" href="https
 needing a 15-point comeback or more (1% chance or lower).</p></li>
 <li><p>And 10.4% of games would require a record-setting 23-point comeback.</p></li>
 </ul>
-<p>That’s a lot of garbage time games. Even though about 35% of games are within 6-7
+<p>That’s a lot of garbage time games, even though about 35% of games are within 6-7
 points or less.</p>
+<p>And the 1% is a bit of an arbitrary choice, but I chose it because the 5% point of 10
+points seems, emotionally at least, very surmountable. And being down 18 is about 1 in
+500 odds and close to the record of 22 points, which seems a bit too much.</p>
 <p>To be fair, there could have been more drama before the 6-minute mark. Walking back in
 time gets a little better. Looking at the 4th quarter we get:</p>
 <div id="occurs/all_time_at_or_more_12_point_margin" class="nbacd-chart"></div><p>Here:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://nba-comeback-dashboard.github.io/dashboard/index.html?p=2&amp;t=12&amp;s=1996-2024-B&amp;m=auto">The team down 20 points starting the 4th has about a 1% chance of coming back</a>.
+<li><p><a class="reference external" href="https://nba-comeback-dashboard.github.io/dashboard/index.html?p=3&amp;t=12&amp;s=1996-2024-B&amp;m=auto">The team down 20 points starting the 4th has about a 1% chance of coming back</a>.
 And only about 13-14% of games have a deficit of 20 points or more starting the 4th.</p></li>
 <li><p>And games down 28 points or more at the half – which would require breaking <a class="reference external" href="https://www.nba.com/game/0020200278">the
 current record of 27-point 4th quarter comeback</a> – only happen about 4% of the time.</p></li>
 </ul>
 <p>And at halftime:</p>
 <div id="occurs/all_time_at_or_more_24_point_margin" class="nbacd-chart"></div><ul class="simple">
-<li><p><a class="reference external" href="https://nba-comeback-dashboard.github.io/dashboard/index.html?p=2&amp;t=24&amp;s=1996-2024-B&amp;m=auto">Since 1996 there’s about a 1% chance of coming back from a 27-point deficit</a>,
+<li><p><a class="reference external" href="https://nba-comeback-dashboard.github.io/dashboard/index.html?p=3&amp;t=24&amp;s=1996-2024-B&amp;m=auto">Since 1996 there’s about a 1% chance of coming back from a 27-point deficit</a>,
 and that’s only 1.5% of all games where the deficit is 27 or more points starting the
 3rd quarter.</p></li>
 <li><p>The 10% chance of coming back is about 15 points, which is only about 17% of all
 games since 1996.</p></li>
 </ul>
-<p>So it’s pretty rare you need to turn off the TV at halftime.</p>
-<p>Interestingly, for the playoffs the situation does not change by much.  <a class="reference external" href="https://nba-comeback-dashboard.github.io/dashboard/index.html?p=2&amp;t=6&amp;s=1996-2024-P&amp;m=auto">From the
+<p>So it’s pretty rare that you need to turn off the TV at halftime.</p>
+<p>Interestingly, for the playoffs, the situation does not change by much. <a class="reference external" href="https://nba-comeback-dashboard.github.io/dashboard/index.html?p=3&amp;t=6&amp;s=1996-2024-P&amp;m=auto">From the
 dashboard</a>
-the 1% point of coming back is again about 15 points.  And as we can see:</p>
-<div id="occurs/all_time_playoffs_at_or_more_6_point_margin" class="nbacd-chart"></div><p>about 29-30% of games meet this criteria, an increase of 1%.  This surprised me, as I
-would have guessed there would have been many more tighter, competitive games during
-the playoffs.</p>
+the 1% point of coming back is again about 15 points. And as we can see:</p>
+<div id="occurs/all_time_playoffs_at_or_more_6_point_margin" class="nbacd-chart"></div><p>about 29-30% of games meet this criterion, an increase of 1%. This surprised me, as I
+would have guessed there would have been many more tight, competitive games during the
+playoffs.</p>
 </section>
 <section id="comparing-old-school-1996-2016-to-modern-2017-2024">
-<span id="comparing-occurs-eras"></span><h2>Comparing Old School (1996-2016) to Modern (2017-2024)<a class="headerlink" href="#comparing-old-school-1996-2016-to-modern-2017-2024" title="Link to this heading">#</a></h2>
+<span id="comparing-occurs-eras"></span><span id="id4"></span><h2>Comparing Old School (1996-2016) to Modern (2017-2024)<a class="headerlink" href="#comparing-old-school-1996-2016-to-modern-2017-2024" title="Link to this heading">#</a></h2>
 <section id="shift-in-final-scores">
 <h3>Shift in Final Scores<a class="headerlink" href="#shift-in-final-scores" title="Link to this heading">#</a></h3>
 <p>There has been a remarkable shift in the final scores of NBA games, with the median
@@ -447,7 +450,7 @@ And this is a static shift in the mean of the data; the slope or standard deviat
 remains almost perfectly constant:</p>
 <div id="occurs/old_school_v_modern_scores" class="nbacd-chart"></div><div id="occurs/old_school_v_modern_scores_or_more" class="nbacd-chart"></div></section>
 <section id="comparing-occurs-eras-max-points-down">
-<span id="id4"></span><h3>Max Points Down<a class="headerlink" href="#comparing-occurs-eras-max-points-down" title="Link to this heading">#</a></h3>
+<span id="id5"></span><h3>Max Points Down<a class="headerlink" href="#comparing-occurs-eras-max-points-down" title="Link to this heading">#</a></h3>
 <p>Looking at a chart comparing max points down or more:</p>
 <div id="occurs/old_school_v_modern_max_or_more_48_point_margin" class="nbacd-chart"></div><p>Now, teams fall down:</p>
 <ul class="simple">
@@ -458,12 +461,33 @@ not-quite-as-dramatic 1.31x increase (or about 31% more frequently).</p></li>
 </ul>
 </section>
 <section id="comparing-occurs-eras-garbage-time">
-<span id="id5"></span><h3>Garbage Time Games<a class="headerlink" href="#comparing-occurs-eras-garbage-time" title="Link to this heading">#</a></h3>
+<span id="id6"></span><h3>Garbage Time Games<a class="headerlink" href="#comparing-occurs-eras-garbage-time" title="Link to this heading">#</a></h3>
 <p>Looking at max down or more at the 6-minute mark, we see a similar shift:</p>
 <div id="occurs/old_school_v_modern_at_or_more_6_point_margin" class="nbacd-chart"></div><p>But the amount of games where “it’s over” stays about the same: while there are more
 games with larger deficits, this is offset by modern teams being able to overcome about
 <a class="reference internal" href="20_is_new_18.html"><span class="doc">2-3 more points at the same probability as in the past</span></a>.</p>
 </section>
+</section>
+<section id="comparing-regular-season-versus-the-playoffs-late-game-point-margins">
+<span id="id7"></span><h2>Comparing Regular Season Versus the Playoffs Late Game Point Margins<a class="headerlink" href="#comparing-regular-season-versus-the-playoffs-late-game-point-margins" title="Link to this heading">#</a></h2>
+<p>Comparing the number of blowout games in the regular season versus the playoffs shows
+no appreciable difference. Surprising, given the stakes and that the bottom teams have
+been weeded out from contention. It has been stated that <a class="reference external" href="https://www.theringer.com/2022/05/25/nba/playoff-basketball-blowout-trend-historical-analysis">there’s an increasing number
+of blowouts occurring in the playoffs</a>,
+but looking at the point margins across all games does not bear this out:</p>
+<div id="occurs/all_time_reg_v_playoffs_at_or_more_6_point_margin" class="nbacd-chart"></div><p>Here, the occurrence of 15 points down or more games is 29.8% for the playoffs versus
+28.2% for the regular season, nothing major.</p>
+<p>Looking at the point margin at the buzzer, we get a result which tells a similar story:</p>
+<div id="occurs/all_time_reg_v_playoffs_at_or_more_0_point_margin" class="nbacd-chart"></div><p>We can also check to see if there’s been a dramatic shift recently. Comparing all games
+since 1996 versus the last four years for how bad the losing team is down at the six-
+minute mark, we get:</p>
+<div id="occurs/very_modern_vs_all_time_at_or_more_6_point_margin" class="nbacd-chart"></div><p>A shift, but this is <a class="reference internal" href="20_is_new_18.html"><span class="doc">the same two-point shift</span></a> we see
+when comparing comeback chances in different eras. For the last four years of playoff
+games, roughly 30% of games at the six-minute mark have a point deficit of 16 or more
+compared to 14 points or more for all time. And given that teams can overcome about 2
+more points of deficit, this is about the same level of “excitement” in the game: for
+example, at six minutes about 50% of playoff games have a 10-point deficit in the last
+four years versus a 9-point deficit in the past.</p>
 </section>
 </section>
 
@@ -499,6 +523,7 @@ games with larger deficits, this is offset by modern teams being able to overcom
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comparing-occurs-eras-garbage-time">Garbage Time Games</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparing-regular-season-versus-the-playoffs-late-game-point-margins">Comparing Regular Season Versus the Playoffs Late Game Point Margins</a></li>
 </ul>
   </nav></div>
 
