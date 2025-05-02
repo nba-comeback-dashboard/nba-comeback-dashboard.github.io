@@ -33,6 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../_static/css/colored_boxes.css?v=103e0ea0" />
     <link rel="stylesheet" type="text/css" href="../_static/css/toc_entry.css?v=c18cc440" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/published_date.css?v=3ceb75a0" />
     <link rel="stylesheet" type="text/css" href="../_static/css/nbacd.css?v=62283bc2" />
     <link rel="stylesheet" type="text/css" href="../_static/css/nbacd-media.css?v=6b9690a2" />
     <link rel="stylesheet" type="text/css" href="../_static/css/nbacd-dashboard.css?v=5fbb978c" />
@@ -42,9 +43,12 @@
     <link rel="stylesheet" type="text/css" href="../_static/css/colored_boxes.css?v=103e0ea0" />
     <link rel="stylesheet" type="text/css" href="../_static/css/pydata-customizations.css?v=bdb493fc" />
     <link rel="stylesheet" type="text/css" href="../_static/css/toc_entry.css?v=c18cc440" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/published_date.css?v=3ceb75a0" />
     <link rel="stylesheet" type="text/css" href="../_static/css/font_choice_4.css?v=efdf24e0" />
     <link rel="stylesheet" type="text/css" href="../_static/css/toc_entry_font_choice_4.css?v=32f887ec" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/published_date_font_choice_4.css?v=0e40eb6b" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom_logo.css?v=abac4470" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom_nav_tabs.css?v=9cd63e1f" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -366,7 +370,7 @@
                   
   <section id="playoffs-the-odds-of-coming-back-or-closing-it-out">
 <h1>Playoffs: The Odds of Coming Back Or Closing It Out<a class="headerlink" href="#playoffs-the-odds-of-coming-back-or-closing-it-out" title="Link to this heading">#</a></h1>
-<section id="comeback-odds-and-occurrence-rate-of-a-seven-game-series-deficit">
+<div class="published-date">April 28, 2025</div><section id="comeback-odds-and-occurrence-rate-of-a-seven-game-series-deficit">
 <span id="comeback-odds-occurrence-rate-versus-a-series-deficit"></span><h2>Comeback Odds and Occurrence Rate of a Seven-Game Series Deficit<a class="headerlink" href="#comeback-odds-and-occurrence-rate-of-a-seven-game-series-deficit" title="Link to this heading">#</a></h2>
 <p>We can also look at the odds of coming back from a series deficit <a class="reference internal" href="methodology_forming_the_plot_trend_lines.html"><span class="doc">plotted on a
 normal probability plot</span></a> and look
@@ -553,13 +557,25 @@ different rounds of the playoffs.</p></li>
 past (7.64%). There’s not a ton of data points here, so some or most of this could just
 be noise, but that data is presented here for one to speculate.</p>
 </section>
+<section id="what-are-the-chances-of-coming-back-from-a-0-3-hole">
+<span id="id3"></span><h2>What are the Chances of Coming Back from a 0-3 Hole?<a class="headerlink" href="#what-are-the-chances-of-coming-back-from-a-0-3-hole" title="Link to this heading">#</a></h2>
+<p>Using the <a class="reference internal" href="#notes-on-win-plot"><span class="std std-ref">mapping described below</span></a> we can then use
+<a class="reference internal" href="methodology_forming_the_plot_trend_lines.html#how-to-fit-the-line"><span class="std std-ref">probit regression</span></a> and predict a trend.  This shows the
+percent chance should be around 1.6%.</p>
+<p>And, since there have been 101 0-3 series so far, using a two sided binomial test we
+get a p value of about 0.4 – meaning it is very well within the statistical odds of
+never seeing a 0-3 comeback even with a 1.5% chance.</p>
+<p>Whether my mapping is correct and the underlying data is in fact normal is another
+issue – so take this with a huge grain of salt. But it suggests the odds are not
+nearly as bad as 0% or even 1 in 1000 and closer to 1 in 100.</p>
+</section>
 <section id="notes-on-win-plot">
-<span id="id3"></span><h2>Notes on Win % Plot<a class="headerlink" href="#notes-on-win-plot" title="Link to this heading">#</a></h2>
+<span id="id4"></span><h2>Notes on Win % Plot<a class="headerlink" href="#notes-on-win-plot" title="Link to this heading">#</a></h2>
 <p>When ‘Win % Versus Series Score’ is plotted on a <a class="reference external" href="https://en.wikipedia.org/wiki/Normal_probability_plot">normal probability plot</a>, the data is fairly normally
 distributed (with really only the 0-1 chances throwing off the normality). I did this
 by using this mapping:</p>
-<div class="pst-scrollable-table-container"><table class="table" id="id4">
-<caption><span class="caption-text">Series Score Mapping</span><a class="headerlink" href="#id4" title="Link to this table">#</a></caption>
+<div class="pst-scrollable-table-container"><table class="table" id="id5">
+<caption><span class="caption-text">Series Score Mapping</span><a class="headerlink" href="#id5" title="Link to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Series Score</p></th>
 <th class="head"><p>Integer Value</p></th>
@@ -625,6 +641,7 @@ by using this mapping:</p>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparing-old-school-versus-modern-eras">Comparing Old School Versus Modern Eras</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-the-chances-of-coming-back-from-a-0-3-hole">What are the Chances of Coming Back from a 0-3 Hole?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notes-on-win-plot">Notes on Win % Plot</a></li>
 </ul>
   </nav></div>
