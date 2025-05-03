@@ -51,4 +51,9 @@
         float: none;
         margin: 0.75em 0;
     }
+    
+    /* Hide elements with corner-quote-hide-mobile class on mobile screens */
+    .corner-quote-hide-mobile {
+        display: none !important;
+    }
 }
