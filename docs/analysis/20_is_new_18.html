@@ -34,6 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/css/colored_boxes.css?v=103e0ea0" />
     <link rel="stylesheet" type="text/css" href="../_static/css/toc_entry.css?v=c18cc440" />
     <link rel="stylesheet" type="text/css" href="../_static/css/published_date.css?v=3ceb75a0" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/corner_quote.css?v=7e35b5b7" />
     <link rel="stylesheet" type="text/css" href="../_static/css/nbacd.css?v=62283bc2" />
     <link rel="stylesheet" type="text/css" href="../_static/css/nbacd-media.css?v=6b9690a2" />
     <link rel="stylesheet" type="text/css" href="../_static/css/nbacd-dashboard.css?v=5fbb978c" />
@@ -44,6 +45,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/css/pydata-customizations.css?v=bdb493fc" />
     <link rel="stylesheet" type="text/css" href="../_static/css/toc_entry.css?v=c18cc440" />
     <link rel="stylesheet" type="text/css" href="../_static/css/published_date.css?v=3ceb75a0" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/corner_quote.css?v=7e35b5b7" />
     <link rel="stylesheet" type="text/css" href="../_static/css/font_choice_4.css?v=efdf24e0" />
     <link rel="stylesheet" type="text/css" href="../_static/css/toc_entry_font_choice_4.css?v=32f887ec" />
     <link rel="stylesheet" type="text/css" href="../_static/css/published_date_font_choice_4.css?v=0e40eb6b" />
@@ -92,14 +94,33 @@
     <script src="../_static/js/nbacd_dashboard_state.js?v=9ad08154"></script>
     <script src="../_static/js/nbacd_dashboard_ui.js?v=597245b5"></script>
     <script src="../_static/js/nbacd_dashboard_init.js?v=4612a8d0"></script>
-    <link rel="icon" href="../_static/nbacd_v2.png"/>
+    <link rel="icon" href="../_static/favicon-32x32.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Home Versus Away" href="home_v_away.html" />
     <link rel="prev" title="Analysis" href="index.html" />
+    
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../_static/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../_static/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../_static/icons/favicon-16x16.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="../_static/site.webmanifest">
+    
+    <!-- iOS Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="NBA Comeback Dashboard">
+    
+    <!-- MS/Windows Meta Tags -->
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-TileImage" content="../_static/icons/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
   </head>
   
   
@@ -372,7 +393,9 @@
 <h1>20 is the New 18<a class="headerlink" href="#is-the-new-18" title="Link to this heading">#</a></h1>
 <div class="published-date">March 26, 2025 | Last Updated: April 24, 2025</div><section id="are-big-leads-no-longer-safe">
 <span id="id1"></span><h2>Are Big Leads No Longer Safe?<a class="headerlink" href="#are-big-leads-no-longer-safe" title="Link to this heading">#</a></h2>
-<p>There’s a perception that, in recent times, teams are climbing out of big deficits more
+<div class="corner-quote"><p>“While a statistically significant shift has occurred comparing new to old,
+the shift is more about 2 to 2.5 points, not 8.”</p>
+</div><p>There’s a perception that, in recent times, teams are climbing out of big deficits more
 often than ever before. Just as <a class="reference external" href="https://www.espn.com/nba/story/_/id/26725776/this-season-massive-comeback-nba">Kevin Pelton and Baxter Holmes noted in 2019</a>, so
 did ESPN reporter Andrew Lopez in <a class="reference external" href="https://www.espn.com/nba/story/_/id/39698420/no-lead-safe-nba-big-comebacks-blown-leads">‘20 is the old 12’: Why no lead is safe in the NBA
 anymore</a>.
@@ -413,12 +436,12 @@ dramatically around 2016. And if you:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="plots/old_old_school_v_old_school.html"><span class="doc">Break up the old school eras into two even decades from 1996-2006 v 2007-2016</span></a> you can see there is very little shift
 in the numbers.</p></li>
-<li><p>Similarly, if you <a class="reference internal" href="plots/new_school_v_new_new_school.html"><span class="doc">break up the modern era into the more fine-grained 4 year
+<li><p>Similarly, if you <a class="reference internal" href="plots/new_school_v_new_new_school.html"><span class="doc">break up the modern era into the more fine-grained 4-year
 chunks of 2017-2020 v 2021-2024</span></a> you
 again see very little difference.</p></li>
 </ul>
-<p>So – always wanting as many games as possible to reduce the statistical noise – I
-felt that was the fairest breakdown: <a class="reference internal" href="plots/old_school_v_modern.html"><span class="doc">1996-2016 v
+<p>So—always wanting as many games as possible to reduce the statistical noise—I felt that
+was the fairest breakdown: <a class="reference internal" href="plots/old_school_v_modern.html"><span class="doc">1996-2016 v
 2017-2024</span></a>.</p>
 </section>
 <section id="win-percentages-when-max-deficit-is-n-or-more-points">
@@ -511,13 +534,13 @@ eras we get:</p>
 characterization.</p>
 </section>
 <section id="real-time-probabilities">
-<span id="id5"></span><h2>Real Time Probabilities<a class="headerlink" href="#real-time-probabilities" title="Link to this heading">#</a></h2>
+<span id="id5"></span><h2>Real-Time Probabilities<a class="headerlink" href="#real-time-probabilities" title="Link to this heading">#</a></h2>
 <p>One interesting way to look at the data is to show what the running probabilities would
 be using data from the modern era versus the past. Note, this probability calculator
 doesn’t account for team or player strength or home court advantage – it’s based
 solely on win/loss data from the specified time ranges.</p>
-<div id="20_18/espn_v_dashboard_old_school_v_modern_min_at_lal_401767915" class="nbacd-chart"></div><p>So at halftime, the wolves had 12.9% chance of winning using modern data versus a 9.1%
-chance if you use data from the past.</p>
+<div id="20_18/espn_v_dashboard_old_school_v_modern_min_at_lal_401767915" class="nbacd-chart"></div><p>So at halftime, the Wolves had a 12.9% chance of winning using modern data versus a
+9.1% chance if you use data from the past.</p>
 <p>Here’s another game:</p>
 <div id="20_18/espn_v_dashboard_old_school_v_modern_min_at_bucks_401705718" class="nbacd-chart"></div><p>The same basic trend emerges: from a statistical standpoint, there are notable large
 shifts in percentages comparing the eras (3-4% in some cases). But the shift is not
@@ -525,21 +548,21 @@ large enough to greatly affect how it “feels” as a fan to be down, say, 15 p
 the half.</p>
 </section>
 <section id="what-an-8-point-shift-looks-like">
-<span id="id6"></span><h2>What An 8 Point Shift Looks Like<a class="headerlink" href="#what-an-8-point-shift-looks-like" title="Link to this heading">#</a></h2>
-<p>I thought it would be useful to get a sense of what an 8 point shift looks like and the
+<span id="id6"></span><h2>What An 8-Point Shift Looks Like<a class="headerlink" href="#what-an-8-point-shift-looks-like" title="Link to this heading">#</a></h2>
+<p>I thought it would be useful to get a sense of what an 8-point shift looks like and the
 kind of trend I was expecting to see. So if we look at top 10 teams (out of 30) vs.
 bottom 10 teams in the modern era we get:</p>
 <div id="20_18/dramatic" class="nbacd-chart"></div><p>Here, the chance of a top ten team playing a bottom 10 team coming back from a
 20-points-or-more deficit (<code class="docutils literal notranslate"><span class="pre">~20%</span></code>) is about the same for any team coming back from 12
 or more down against any other team. And, over the last 8 years, the chance of coming
 back from 15 points or more is about 13% – but for a top ten team playing a bottom ten
-team, it’s about 34%. That feels very different and is what an 8 point shift in the
+team, it’s about 34%. That feels very different and is what an 8-point shift in the
 data would foretell.</p>
 </section>
 <section id="what-else-could-be-going-on">
 <span id="id7"></span><h2>What Else Could Be Going On?<a class="headerlink" href="#what-else-could-be-going-on" title="Link to this heading">#</a></h2>
 <p>Blowing a 20-point lead now has about the same chances as blowing a 17 to 18-point lead
-in the past. This two to three point shift is significant but I don’t think matches
+in the past. This two to three point shift is significant but I don’t think it matches
 what <a class="reference external" href="https://www.reddit.com/r/nba/comments/1cc2qqv/dumb_question_is_blowing_a_20_point_lead_that_bad/">I see people saying about leads these days</a>.</p>
 <p>So I just want to consider a few points that I think are useful when thinking about
 this issue:</p>
@@ -549,9 +572,9 @@ the percent shift is not dramatic enough to support the narrative. For example, 
 percent of times a team came back from 15 or more down is about 12.8% recently
 compared to 9.2% in the past. While that’s an increase of about 40%, I don’t think
 having a 12.8% chance versus a 9.2% chance gives you a markedly different feeling
-about the game. If you <a class="reference internal" href="#what-an-8-point-shift-looks-like"><span class="std std-ref">compare that to the 8 point shift graph</span></a>, here the percent chance is about 34% for a top
+about the game. If you <a class="reference internal" href="#what-an-8-point-shift-looks-like"><span class="std std-ref">compare that to the 8-point shift graph</span></a>, here the percent chance is about 34% for a top
 10 team to come back 15 or more against a bottom ten team over the last 8 years. That
-is dramatic and would warrant the kind of talk of “a 15 point lead doesn’t matter
+is dramatic and would warrant the kind of talk of “a 15-point lead doesn’t matter
 anymore”.</p></li>
 <li><p>Scoring is up dramatically. <a class="reference internal" href="occurs.html#comparing-occurs-eras"><span class="std std-ref">The median score is 111 points in the modern era</span></a> as compared to 97 in the past: a 14-point shift. Also,
 <a class="reference internal" href="occurs.html#comparing-occurs-eras-max-points-down"><span class="std std-ref">teams getting down</span></a> 30 or more points
@@ -608,8 +631,8 @@ a run, it’s also an option for your opponent. For another day.</p></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#win-percentages-when-max-deficit-is-n-or-more-points">Win Percentages When Max Deficit is N <em>Or More</em> Points</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#win-percentages-when-teams-are-down-n-points-with-so-much-time-left">Win Percentages When Teams Are Down N Points With So Much Time Left</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#win-versus-time">Win % Versus Time</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#real-time-probabilities">Real Time Probabilities</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-an-8-point-shift-looks-like">What An 8 Point Shift Looks Like</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#real-time-probabilities">Real-Time Probabilities</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-an-8-point-shift-looks-like">What An 8-Point Shift Looks Like</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-else-could-be-going-on">What Else Could Be Going On?</a></li>
 </ul>
   </nav></div>
