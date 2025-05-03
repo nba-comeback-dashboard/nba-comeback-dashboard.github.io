@@ -59,7 +59,7 @@ Garbage Time Games
 ==================
 
 .. corner-quote::
-   :text: A full 28% of games -- over 1 in 4! -- are effectively over by
+   :text: A full 28% of games -- over 1 in 4 -- are effectively over by
           the 6-minute mark, needing a 15-point comeback or more (which has about a 1%
           or lower chance of happening).
 
@@ -93,7 +93,7 @@ that:
 
 Using those two numbers we can say:
 
-* A full 28% of games -- over 1 in 4! -- are effectively over by the 6-minute mark,
+* A full 28% of games -- over 1 in 4 -- are effectively over by the 6-minute mark,
   needing a 15-point comeback or more (which has about a 1% or lower chance of
   happening).
     

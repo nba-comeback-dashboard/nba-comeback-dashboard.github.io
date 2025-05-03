@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/css/colored_boxes.css?v=103e0ea0" />
     <link rel="stylesheet" type="text/css" href="../_static/css/toc_entry.css?v=c18cc440" />
     <link rel="stylesheet" type="text/css" href="../_static/css/published_date.css?v=3ceb75a0" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/corner_quote.css?v=47562031" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/corner_quote.css?v=d977ddc3" />
     <link rel="stylesheet" type="text/css" href="../_static/css/nbacd.css?v=62283bc2" />
     <link rel="stylesheet" type="text/css" href="../_static/css/nbacd-media.css?v=6b9690a2" />
     <link rel="stylesheet" type="text/css" href="../_static/css/nbacd-dashboard.css?v=5fbb978c" />
@@ -45,7 +45,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/css/pydata-customizations.css?v=bdb493fc" />
     <link rel="stylesheet" type="text/css" href="../_static/css/toc_entry.css?v=c18cc440" />
     <link rel="stylesheet" type="text/css" href="../_static/css/published_date.css?v=3ceb75a0" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/corner_quote.css?v=47562031" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/corner_quote.css?v=d977ddc3" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/icon_alignment_fix.css?v=c39f01bc" />
     <link rel="stylesheet" type="text/css" href="../_static/css/font_choice_4.css?v=efdf24e0" />
     <link rel="stylesheet" type="text/css" href="../_static/css/toc_entry_font_choice_4.css?v=32f887ec" />
     <link rel="stylesheet" type="text/css" href="../_static/css/published_date_font_choice_4.css?v=0e40eb6b" />
@@ -95,7 +96,7 @@
     <script src="../_static/js/nbacd_dashboard_state.js?v=9ad08154"></script>
     <script src="../_static/js/nbacd_dashboard_ui.js?v=597245b5"></script>
     <script src="../_static/js/nbacd_dashboard_init.js?v=4612a8d0"></script>
-    <link rel="icon" href="../_static/favicon-32x32.png"/>
+    <link rel="icon" href="../_static/nba-comeback-dashboard-basketball.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Occurrence Frequencies of Points Scored, Points Down, and Garbage Time Games" href="occurs.html" />
@@ -104,22 +105,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <!-- Apple Touch Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="../_static/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../_static/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../_static/icons/favicon-16x16.png">
+    <!-- Icons - All icons will be at the root level during build -->
+    <!-- Standard Favicon (SVG and ICO) -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+    <!-- Apple Touch Icons for iOS home screen - these MUST be PNG files -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- PNG fallbacks for browsers that don't support SVG icons -->
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
     
     <!-- Web App Manifest -->
-    <link rel="manifest" href="../_static/site.webmanifest">
+    <link rel="manifest" href="/site.webmanifest">
     
     <!-- iOS Meta Tags -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="NBA Comeback Dashboard">
+    <meta name="application-name" content="NBA Comeback Dashboard">
     
     <!-- MS/Windows Meta Tags -->
     <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="msapplication-TileImage" content="../_static/icons/mstile-144x144.png">
+    <meta name="msapplication-TileImage" content="/web-app-manifest-192x192.png">
     <meta name="theme-color" content="#ffffff">
 
   </head>
@@ -185,7 +194,7 @@
     
     
     
-    <img src="../_static/nbacd_v2_small.png" class="logo__image only-light" alt=""/>
+    <img src="../_static/nba-comeback-dashboard-basketball.svg" class="logo__image only-light" alt=""/>
     <img src="" class="logo__image only-dark pst-js-only" alt=""/>
   
   
@@ -238,7 +247,7 @@
           
           
           
-          <a href="https://buymeacoffee.com/nba.comeback.dashboard" title="Buy Me a Coffee" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static/icons/buy-me-coffee.svg" class="icon-link-image" alt="Buy Me a Coffee"/></a>
+          <a href="https://buymeacoffee.com/nba.comeback.dashboard" title="Buy Me a Coffee" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="/buy-me-coffee.svg" class="icon-link-image" alt="Buy Me a Coffee"/></a>
         </li>
 </ul></div>
       
@@ -321,7 +330,7 @@
           
           
           
-          <a href="https://buymeacoffee.com/nba.comeback.dashboard" title="Buy Me a Coffee" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static/icons/buy-me-coffee.svg" class="icon-link-image" alt="Buy Me a Coffee"/></a>
+          <a href="https://buymeacoffee.com/nba.comeback.dashboard" title="Buy Me a Coffee" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="/buy-me-coffee.svg" class="icon-link-image" alt="Buy Me a Coffee"/></a>
         </li>
 </ul></div>
         

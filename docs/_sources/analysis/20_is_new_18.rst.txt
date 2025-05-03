@@ -14,7 +14,8 @@ Are Big Leads No Longer Safe?
 =============================
 
 .. corner-quote::
-   :text: Comparing new to old, the shift is more about 2 to 2.5 points, not 8.
+   :text: When comparing the chances of pulling off a 20-or-more point comeback the
+          shift is more about 2 points, not 8.
 
 There's a perception that, in recent times, teams are climbing out of big deficits more
 often than ever before. Just as `Kevin Pelton and Baxter Holmes noted in 2019
@@ -33,8 +34,9 @@ comebacks in a single season since 1996-97 and continues with analysis by Steve 
     mean, there's definitely an awareness from everybody that leads are not safe."
 
 
-But is this true? In short... not really. While a statistically significant shift has
-occurred comparing new to old, the shift is more about 2 to 2.5 points, not 8.
+But is this true? In short... not really. While there's certainly been a significant
+shift, when comparing the chances of pulling off a 20-or-more point comeback the shift
+is more about 2 points, not 8.
 
 To show this, let's look at a chart showing the percent chance of coming back when a
 team is :ref:`down N or more points at some point in a game <max-points-down-or-more>`:
@@ -47,16 +49,16 @@ Looking at this data, the chance of coming back from 20 points-or-more down (``~
 is about the same as coming back from 18 points-or-more down (``~4.9%``) in the earlier
 era. And this shift remains fairly constant comparing other points on the graph.
 
-To put this in perspective, this overall 2 to 2.5 point shift is on par with but not
-quite as pronounced as :doc:`the advantage a home team has over a road team
+To put this in perspective, this overall 2 point shift is on par with but not quite as
+pronounced as :doc:`the advantage a home team has over a road team
 </analysis/home_v_away>` when attempting a comeback. Note, there are :doc:`many ways to
-compare the comeback chances of the eras
-</analysis/understanding_and_using_the_plots>`, but roughly 2 points is a fairly stable
-characterization of the shift under varying conditions.
+compare the comeback chances of the eras at different points in time during the game
+</analysis/understanding_and_using_the_plots>` which affects the size of the shift
+(explained below), but roughly 2 points is a pretty good average.  ()
 
-To be clear, there has been a marked shift in the data: there are about 1.8 times as
-many 20-points-or-more comebacks comparing the eras. And when viewed through the lens
-of a point spread in sports betting, a 2-3 point shift is significant.
+To note, there has been a marked shift in the data: there are about 1.8 times as many
+20-points-or-more comebacks comparing the eras. And when viewed through the lens of a
+point spread in sports betting, a 2 point shift is significant.
 
 But as a fan watching the game, the data shows that leads are *roughly* as safe as they
 have been, perhaps needing an extra bucket to maintain the same level of security.
@@ -147,9 +149,10 @@ or more there was about a ``~0.50%`` chance of winning.
 
 .. green-box::
 
-    Note, this uses the raw data points, which is a little more intuitive. You can also
-    do this using the trend line in the chart, which cleans up the noise in the data
-    and is statistically more accurate. Overall, either way draws the same conclusion.
+    Note, this table above uses the raw game data points, which is a little more
+    intuitive. You can also do this using the trend line in the chart, which cleans up
+    the noise in the data and is statistically more accurate. Overall, either way draws
+    the same conclusion.
 
 As time dwindles, this shift is slightly smaller. Looking at biggest 4th quarter
 comebacks we get:

@@ -8,8 +8,8 @@
     line-height: 1.1;
     color: #555;
     position: relative;
-    border-top: 0.25px solid #aaa;
-    border-bottom: 0.25px solid #aaa;
+    border-top: 0.5px solid #888;
+    border-bottom: 0.5px solid #888;
     box-sizing: border-box;
     clear: right;
     float: right;
@@ -26,8 +26,8 @@
 .corner-quote::after {
     content: "";
     display: block;
-    height: 0.1px;
-    background-color: #aaa;
+    height: 0.5px;
+    background-color: #888;
     margin: 0 auto;
     position: absolute;
     left: 0;
