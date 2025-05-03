@@ -14,8 +14,7 @@ Are Big Leads No Longer Safe?
 =============================
 
 .. corner-quote::
-   :text: While a statistically significant shift has occurred comparing new to old,
-          the shift is more about 2 to 2.5 points, not 8.
+   :text: Comparing new to old, the shift is more about 2 to 2.5 points, not 8.
 
 There's a perception that, in recent times, teams are climbing out of big deficits more
 often than ever before. Just as `Kevin Pelton and Baxter Holmes noted in 2019
